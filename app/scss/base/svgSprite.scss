@@ -8,7 +8,7 @@
     display: inline-block;
     background-image: url("../images/sprite.svg");
     background-repeat: no-repeat;
-    background-size: 86em 91.6em;
+    background-size: 86em 110.4em;
 }
 
 .no-svg .svg-icon:before {
@@ -17,8 +17,53 @@
 
 
 
-  .svg-icon.svg-start__bg-img:before {
+  .svg-icon.svg-akkred:before {
       background-position: 0em 0em;
+      width: 4.3em;
+      height: 3.8em;
+  }
+
+
+
+
+  .svg-icon.svg-certif:before {
+      background-position: 0em -3.8em;
+      width: 2.8em;
+      height: 3.9em;
+  }
+
+
+
+
+  .svg-icon.svg-docx:before {
+      background-position: 0em -7.7em;
+      width: 4.1em;
+      height: 3.7em;
+  }
+
+
+
+
+  .svg-icon.svg-download:before {
+      background-position: 0em -11.4em;
+      width: 2.4em;
+      height: 3.3em;
+  }
+
+
+
+
+  .svg-icon.svg-people:before {
+      background-position: 0em -14.7em;
+      width: 4em;
+      height: 4.1em;
+  }
+
+
+
+
+  .svg-icon.svg-start__bg-img:before {
+      background-position: 0em -18.8em;
       width: 86em;
       height: 91.6em;
   }

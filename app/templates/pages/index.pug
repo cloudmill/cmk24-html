@@ -17,6 +17,41 @@ block content
                     +icon('start__bg-img', 'svg')
                 .button.button--red.button--mg-t--30 Узнать подробнее
         
+        .advant
+            .inner
+                .title Преимущества
+                .advant__conteiner
+                    .toolTip
+                        .bg-circle
+                            +icon("people", "svg")
+                        .text Личное присутствие
+                            br
+                            |эксперта-аудитора на предприятии
+                        .link Ваш аудитор
+                    .toolTip
+                        .bg-circle
+                            +icon("akkred", "svg")
+                        .text Аккредитованы
+                            br
+                            |РОССТАНДАРТОМ под номером
+                            br
+                            |№ РОСС RU.31763.04ЖОЭ2
+                        .link Смотреть в реестре
+                    .toolTip
+                        .bg-circle
+                            +icon("docx", "svg")
+                        .text Гарантии и алгоритм работы
+                            br
+                            |прописаны в Договоре
+                        .link Типовой договор
+                    .toolTip
+                        .bg-circle
+                            +icon("certif", "svg")
+                        .text Выдаем сертификаты только
+                            br
+                            |от аккредитованных органов
+                        .link Образец сертификата
+
         .tariffs
 
             .inner
@@ -43,4 +78,25 @@ block content
                                     h3.tariff__info-title Стоимость внедрения
                                     p.tariff__info-text 2-6 месяца
 
-                            a.button.tariff__button(class = tariff ? "button--red" : "button--blue", href="#modal", data-modal="tariff-1") Мне подходит
+                            a.button.tariff__button(class = tariff ? "button--red" : "button--blue", href="#modal", data-modal="tariff-1") Мне подходит 
+
+
+        .sale
+            .inner.inner--pg-l--110
+                .title.title--white Скидка 30%
+                .text.text--section.text--mg-t--20 Ответьте на несколько вопросов
+                    br
+                    |и получите скидку!
+                .button.button--red.button--mg-t--120 Получить скидку
+                .percent
+                    p -30%
+                    p -30%
+                    p -30%
+
+
+        .package
+            .inner.inner--wd--1200
+                .title В пакет документов входит
+                    .link.link--icon Скачать архивом
+                .conteiner-dokx
+                    .item

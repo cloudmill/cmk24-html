@@ -6,4 +6,19 @@
     color: white;
     margin-top: 5px;
   }
+
+  &--toolTip {
+    font-size: 18px;
+    line-height: 140%;
+    color: #0A0A0A;
+  }
+
+  &--section{
+    font-size: 20px;
+    line-height: 130%;
+    color: white;
+  }
+  &--mg-t--20 {
+    margin-top: 20px;
+  }
 }

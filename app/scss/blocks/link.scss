@@ -1,0 +1,23 @@
+.link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #4998FF;
+  border-bottom: 1px solid #A3CAFF;
+  height: 20px;
+  position: relative;
+  &--icon {
+    margin-right: 30px;
+    &::before {
+      content: '';
+      position: absolute;
+      top:-50%;
+      right: -30px;
+      width: 24px;
+      height: 33px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url("data:image/svg+xml,%3Csvg width='24' height='33' viewBox='0 0 24 33' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M23.3636 9.28029V28.0142C23.3636 30.2233 21.5728 32.0142 19.3636 32.0142H5C2.79086 32.0142 1 30.2233 1 28.0142V5.06055C1 2.85141 2.79086 1.06055 5 1.06055H14.9958M23.3636 9.28029H18.9958C16.7866 9.28029 14.9958 7.48943 14.9958 5.2803V1.06055M23.3636 9.28029L14.9958 1.06055' stroke='%234998FF'/%3E%3Cpath d='M8.55273 22.0153H16.032M12.2553 14.8323V20.7564M12.2553 20.7564L10.7002 18.9792M12.2553 20.7564L13.7364 18.9792' stroke='%234998FF'/%3E%3C/svg%3E");
+    }
+  }
+}
