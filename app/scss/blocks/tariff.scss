@@ -1,0 +1,67 @@
+.tariff {
+    padding: 40px 25px 55px 25px;
+    width: calc((100% - 50px) / 4);
+    display: flex;
+    flex-direction: column;
+
+
+    &--highlight {
+        position: relative;
+        margin: 0 25px;
+        padding-left: 50px;
+        padding-right: 50px;
+
+        &::before {
+            position: absolute;
+            $size: 5px;
+            top: -$size;
+            bottom: -$size;
+            left: 0;
+            right: 0;
+            content: "";
+            display: block;
+            background-color: #4998FF;
+            border-radius: 4px;
+        }
+
+
+        & > * {
+            position: relative;
+            color: white;
+        }
+    }
+
+
+    &__title {
+        font-size: 30px;
+        line-height: 39px;
+    }
+
+
+    &__info {
+        margin-top: 45px;
+    }
+
+    &__info-item {
+
+        &:not(:first-child) {
+            margin-top: 27px;
+        }
+    }
+
+    &__info-title {
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    &__info-text {
+        font-size: 24px;
+        line-height: 31px;
+    }
+
+
+
+    &__button {
+        
+    }
+}

@@ -5,6 +5,7 @@ block variables
 
 block content
     .content
+
         .start
             .inner
                 h1.title.title--start Внедрим систему
@@ -15,3 +16,31 @@ block content
                 .start__bg-img
                     +icon('start__bg-img', 'svg')
                 .button.button--red.button--mg-t--30 Узнать подробнее
+        
+        .tariffs
+
+            .inner
+
+                .tariffs__list
+                    
+                    each tariff in [0, 0, 1, 0]
+
+                        .tariff(class = tariff ? "tariff--highlight" : "")
+                        
+                            h2.tariff__title Премиум
+                            
+                            button.tariff__description.js--tooltip(data-tooltip="tariff-1")
+
+                                .help-link(class = tariff ? "help-link--white" : "") Описание
+                            
+                            ul.tariff__info
+
+                                li.tariff__info-item
+                                    h3.tariff__info-title Стоимость внедрения
+                                    p.tarigg__info-text от 78 000 ₽
+                                    
+                                li.tariff__info-item
+                                    h3.tariff__info-title Стоимость внедрения
+                                    p.tariff__info-text 2-6 месяца
+
+                            a.button.tariff__button(class = tariff ? "button--red" : "button--blue", href="#modal", data-modal="tariff-1") Мне подходит
