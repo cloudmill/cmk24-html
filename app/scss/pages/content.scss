@@ -1,16 +1,88 @@
 .content {
-  display: flex;
   padding-top: 100px;
 }
 .start {
   position: relative;
   width: 100%;
   background: linear-gradient(282.12deg, #A2CAFF 19.54%, #4998FF 100%);
+  padding-top: 105px;
   padding-bottom: 178px;
+  overflow: hidden;
 
   .svg-start__bg-img:before {
     position: absolute;
     top: 60px;
     right: 0;
+  }
+}
+.advant {
+  padding-top: 80px;
+  &__conteiner {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+  }
+  .toolTip {
+    width: 690px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: #F2F7FF;
+    border-radius: 4px;
+    margin: 0 20px 20px 0;
+  }
+  .bg-circle {
+    position: relative;
+    background-color: white;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.sale {
+  background: #4998FF;
+  margin-top: 113px;
+  padding: 120px 0 90px 0;
+  overflow: hidden;
+  .percent {
+    position: absolute;
+    top: -14px;
+    right: 0;
+    font-weight: 500;
+    font-size: 306px;
+    line-height: 120%;
+    & :nth-of-type(1) {
+      position: absolute;
+      top: -59%;
+      background: rgb(163,202,255);
+      background: linear-gradient(0deg, rgba(163,202,255,1) 0%, rgba(255,255,255,1) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    & :nth-of-type(2) {
+      color: #A3CAFF;
+      z-index: 2;
+    }
+    & :nth-of-type(3) {
+      position: absolute;
+      bottom: -59%;
+      background: rgb(255,255,255);
+      background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(163,202,255,1) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+.package {
+  margin-top: 80px;
+  
+  .container-dox {
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
   }
 }

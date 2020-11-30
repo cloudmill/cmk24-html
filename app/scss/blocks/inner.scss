@@ -1,8 +1,15 @@
 .inner {
   width: 1440px;
   margin: 0 auto;
+  position: relative;
   
   &--flex{
     display: flex;
+  }
+  &--pg-l--110 {
+    padding-left: 110px;
+  }
+  &--wd--1200 {
+    width: 1200px;
   }
 }

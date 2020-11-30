@@ -6,12 +6,20 @@
   align-items: center;
   border-radius: 4px;
   color: white;
+  cursor: pointer;
 
   &--red {
     background-color: #ff4021;
+    &:hover {
+      background-color: #ff2400;
+    }
   }
 
   &--mg-t--30 {
     margin-top: 30px;
+  }
+
+  &--mg-t--120 {
+    margin-top: 120px;
   }
 }
