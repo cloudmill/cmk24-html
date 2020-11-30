@@ -4,14 +4,14 @@ block variables
  -var pageTitle='Главная'
 
 block content
-    .page
-        .swiper-container.slider
-            .swiper-wrapper
-                +sliderSimple(getData('slidesOnMain'))
-        +slider('awdawdaw',true,true,true)
-            .swiper-slide awdawd
-            .swiper-slide awdawd
-            .swiper-slide awdawd
-                
-    +icon('car','svg')
-    +icon('logo')
+    .content
+        .start
+            .inner
+                h1.title.title--start Внедрим систему
+                    br
+                    |менеджмента качества
+                h2.title.title--start-h2 ГОСТ Р ИСО 9001-2015
+                .text.text--srart «Система менеджмента качества на соответствие»
+                .start__bg-img
+                    +icon('start__bg-img', 'svg')
+                .button.button--red.button--mg-t--30 Узнать подробнее

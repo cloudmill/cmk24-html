@@ -1,0 +1,16 @@
+.content {
+  display: flex;
+  padding-top: 100px;
+}
+.start {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(282.12deg, #A2CAFF 19.54%, #4998FF 100%);
+  padding-bottom: 178px;
+
+  .svg-start__bg-img:before {
+    position: absolute;
+    top: 60px;
+    right: 0;
+  }
+}

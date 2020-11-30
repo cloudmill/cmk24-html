@@ -1,0 +1,17 @@
+.button{
+  width: 240px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  color: white;
+
+  &--red {
+    background-color: #ff4021;
+  }
+
+  &--mg-t--30 {
+    margin-top: 30px;
+  }
+}
