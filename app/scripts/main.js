@@ -8,5 +8,3 @@ export default class App {
     window.globalListener = new Listener();
   }
 };
-
-export default App;
