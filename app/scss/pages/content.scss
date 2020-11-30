@@ -35,7 +35,8 @@
   }
 }
 .advant {
-  padding-top: 80px;
+  padding: 80px 0;
+
   &__conteiner {
     display: flex;
     flex-wrap: wrap;
@@ -63,22 +64,24 @@
   }
 }
 .sale {
+  position: relative;
   background: #4998FF;
-  margin-top: 113px;
   padding: 120px 0 90px 0;
   overflow: hidden;
   .percent {
     position: absolute;
-    top: -14px;
-    right: 0;
+    top: 53%;
+    right: -100px;
+    transform: translateY(-50%);
     font-weight: 500;
     font-size: 306px;
     line-height: 120%;
+    $size: 59%;
     & :nth-of-type(1) {
       position: absolute;
-      top: -59%;
+      top: -$size;
       background: rgb(163,202,255);
-      background: linear-gradient(0deg, rgba(163,202,255,1) 0%, rgba(255,255,255,1) 100%);
+      background: linear-gradient(0deg, rgba(163,202,255,1) 25%, rgba(255,255,255,1) 55%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -88,9 +91,9 @@
     }
     & :nth-of-type(3) {
       position: absolute;
-      bottom: -59%;
+      bottom: -$size;
       background: rgb(255,255,255);
-      background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(163,202,255,1) 100%);
+      background: linear-gradient(0deg, rgba(255,255,255,1) 45%, rgba(163,202,255,1) 80%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }

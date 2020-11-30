@@ -1,8 +1,6 @@
 .tariff {
     padding: 40px 25px 55px 25px;
     width: calc((100% - 50px) / 4);
-    display: flex;
-    flex-direction: column;
 
 
     &--highlight {
@@ -62,6 +60,6 @@
 
 
     &__button {
-        
+        margin-top: auto;
     }
 }

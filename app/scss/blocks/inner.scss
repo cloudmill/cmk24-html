@@ -1,9 +1,17 @@
 .inner {
   padding: 0 15px;
-  max-width: 1440px;
+  max-width: 1430px;
   margin: 0 auto;
   
   &--flex{
     display: flex;
+  }
+
+  &--small {
+    max-width: 1230px;
+  }
+
+  &--relative {
+    position: relative;
   }
 }
