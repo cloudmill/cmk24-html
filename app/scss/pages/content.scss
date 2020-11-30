@@ -85,4 +85,18 @@
     display: flex;
     flex-wrap: wrap;
   }
+  .conteiner-dokx__item {
+    padding: 76px 67px 74px 60px;
+    background-color: #f1f6ff;
+    width: 382px;
+    border-radius: 4px;
+    &::before {
+      content: '';
+      width: 29px;
+      height: 41px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url("data:image/svg+xml,%3Csvg width='29' height='41' viewBox='0 0 29 41' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M28.5 11.417V36.0605C28.5 38.2697 26.7091 40.0605 24.5 40.0605H4.5C2.29086 40.0605 0.5 38.2697 0.5 36.0605V5.06055C0.5 2.85141 2.29086 1.06055 4.5 1.06055H18.0232M28.5 11.417H22.0232C19.814 11.417 18.0232 9.62615 18.0232 7.41701V1.06055M28.5 11.417L18.0232 1.06055' stroke='%234998FF'/%3E%3C/svg%3E");
+    }
+  }
 }
