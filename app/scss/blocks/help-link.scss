@@ -1,0 +1,25 @@
+.help-link {
+    position: relative;
+    font-size: 12px;
+    line-height: 15px;
+    color: #63A6FF;
+
+    &::before {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        content: "";
+        display: block;
+        border: 0.5px dashed #9DC7FF;
+    }
+
+    
+    &--white {
+        color: white;
+
+        &::before {
+            border-color: white;
+        }
+    }
+}

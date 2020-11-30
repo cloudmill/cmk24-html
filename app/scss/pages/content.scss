@@ -1,8 +1,10 @@
 .content {
   padding-top: 100px;
+  min-height: 300vh; // test
 }
 .start {
   position: relative;
+  padding-top: 105px;
   width: 100%;
   background: linear-gradient(282.12deg, #A2CAFF 19.54%, #4998FF 100%);
   padding-top: 105px;
@@ -13,6 +15,23 @@
     position: absolute;
     top: 60px;
     right: 0;
+  }
+}
+
+
+.tariffs {
+  padding-top: 80px;
+  padding-bottom: 115px;
+  background-color: white;
+
+
+  &__list {
+    padding: 0 25px;
+    min-height: 300px; // test
+    display: flex;
+    align-items: stretch;
+    border: 1px solid #D0E4FF;
+    border-radius: 4px;
   }
 }
 .advant {
