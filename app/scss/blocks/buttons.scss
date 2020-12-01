@@ -9,27 +9,29 @@
   cursor: pointer;
   transition: all 0.2s;
   background-color: #ff4021;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
   &:hover {
     background-color: #ff2400;
-  }
-
-  &--mg-t--30 {
-    margin-top: 30px;
   }
 
   &--blue {
     width: 100%;
     border: 1px solid #006EFF;
     color: #006EFF;
-    font-size: 16px;
-    line-height: 21px;
+    background-color: white;
   }
-  &--mg-t--100 {
-    margin-top: 100px;
+
+  &--red {
+    background-color: white;
+    border: 2px solid #FF4021;
+    color: #FF4021;
+    &:hover {
+      color: white;
+    }
   }
-  &--mg-t--75 {
-    margin-top: 75px;
-  }
+
   &--slider {
     width: 67px;
     height: 67px;
@@ -55,7 +57,24 @@
       }
     }
   }
+  &--border--blue {
+    border: 1px solid #4997FF;
+  }
+
   &--left {
     transform: rotateY(-180deg);
   }
+
+  &--mg-t--30 {
+    margin-top: 30px;
+  }
+
+  &--mg-t--100 {
+    margin-top: 100px;
+  }
+
+  &--mg-t--75 {
+    margin-top: 75px;
+  }
+
 }

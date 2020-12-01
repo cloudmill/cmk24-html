@@ -43,7 +43,7 @@
     margin-top: 60px;
   }
   .toolTip {
-    width: 690px;
+    width: 680px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -139,24 +139,26 @@
   padding: 125px 0;
   background-color: #4997FF;
 
-  .slider-block__row {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-bottom: 60px;
-  }
-
-  .slider-buttons {
-    display: flex;
-  }
-
   .card {
     width: 485px;
-    height: 200px;
+    padding: 70px ;
     background-color: white;
-    max-width: 485px;
+    max-width: 485px;border-radius: 4px;
   }
   .swiper-container {
     overflow: visible;
+  }
+}
+.docs {
+  padding: 80px 0;
+  .card {
+    max-width: 890px;
+    padding: 100px;
+    background: #F1F6FF;
+    border-radius: 4px;
+    display: flex;
+  }
+  .conteiner {
+    padding: 40px 0 40px 50px
   }
 }
