@@ -15,9 +15,19 @@
     font-size: 55px;
     color: white;
   }
+
   &--start-h2 {
     font-size: 32px;
     color: white;
     margin-top: 80px;
+  }
+
+  &--subtitle {
+    font-size: 26px;
+    line-height: 35px;
+  }
+
+  &--mg-t--20 {
+    margin-top: 20px;
   }
 }
