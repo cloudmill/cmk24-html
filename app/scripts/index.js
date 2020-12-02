@@ -1,5 +1,6 @@
 import $ from "jquery";
 import App from "./main.js";
+import "./modals";
 
 $(document).ready(function() {
   let app = new App();
