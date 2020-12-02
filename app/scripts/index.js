@@ -1,6 +1,6 @@
 import $ from "jquery";
 import App from "./main.js";
-import "./modals";
+import "./modal";
 import Swiper from "swiper";
 
 $(document).ready(function() {
@@ -13,12 +13,15 @@ $(document).ready(function() {
 let headerScroll = function() {
   $(window).on('scroll', function(){
     $('header').addClass('header--scroll');
-    $('.header__logo').addClass('header__logo--scroll');
+    $('.header__logo').css('display', 'none');
+    $('.header__logo--scroll').css('display', 'block');
     $('.header__phone').addClass('header__phone--scroll');
     $('.header__button').addClass('header__button--scroll');
+
     if( $(window).scrollTop() == 0 ){
       $('header').removeClass('header--scroll');
-      $('.header__logo').removeClass('header__logo--scroll');
+      $('.header__logo').css('display', 'block');
+      $('.header__logo--scroll').css('display', 'none');
       $('.header__phone').removeClass('header__phone--scroll');
       $('.header__button').removeClass('header__button--scroll');
     }

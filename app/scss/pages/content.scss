@@ -3,7 +3,6 @@
   min-height: 300vh; // test
 }
 .start {
-  position: relative;
   padding-top: 105px;
   width: 100%;
   background: linear-gradient(282.12deg, #A2CAFF 19.54%, #4998FF 100%);
@@ -11,10 +10,15 @@
   padding-bottom: 178px;
   overflow: hidden;
 
-  .svg-start__bg-img:before {
+  .start__bg-img {
     position: absolute;
-    top: 60px;
-    right: 0;
+    top: 0;
+    right: -250px;
+    img {
+      @include extraLarge {
+        height: 700px;
+      }
+    }
   }
 }
 
@@ -51,6 +55,9 @@
     background-color: #F2F7FF;
     border-radius: 4px;
     margin: 0 20px 20px 0;
+    @include megaLarge {
+      margin: 20px auto;
+    }
   }
   .bg-circle {
     position: relative;
@@ -106,6 +113,9 @@
     padding-top: 60px;
     display: flex;
     flex-wrap: wrap;
+    @include extraLarge {
+      justify-content: center;
+    }
   }
   .conteiner-dokx__item {
     padding: 76px 65px 74px 60px;
@@ -145,9 +155,9 @@
     background-color: white;
     max-width: 485px;border-radius: 4px;
   }
-  .swiper-container {
-    overflow: visible;
-  }
+}
+.swiper-container {
+  overflow: visible;
 }
 .docs {
   padding: 80px 0;

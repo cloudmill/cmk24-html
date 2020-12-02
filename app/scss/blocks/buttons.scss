@@ -57,6 +57,7 @@
       }
     }
   }
+
   &--border--blue {
     border: 1px solid #4997FF;
   }
@@ -75,6 +76,10 @@
 
   &--mg-t--75 {
     margin-top: 75px;
+  }
+  
+  &--wd {
+    width: 100%;
   }
 
 }

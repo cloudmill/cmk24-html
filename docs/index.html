@@ -9,21 +9,27 @@
   <body>
     <div class="wrapper">
       <header class="header">
-        <div class="inner inner--flex">
-          <div class="header__logo"></div>
-          <nav class="header__nav"><a href="#">Преимущества</a><a href="#">Сроки и стоимость</a><a href="#">Скидка 30%</a><a href="#">Кейсы</a><a href="#">Контакты</a></nav><a class="header__phone" href="tel:8 800 5555-087">8 800 5555-087</a>
-          <div class="header__button">Заказать звонок</div>
+        <div class="inner">
+          <div class="row">
+            <div class="row__item">
+              <div class="header__logo"><img src="./images/header-logo.svg" alt="лого"></div>
+              <div class="header__logo--scroll"><img src="./images/header-logo--scroll.svg" alt="лого"></div>
+              <nav class="header__nav"><a href="#">Преимущества</a><a href="#">Сроки и стоимость</a><a href="#">Скидка 30%</a><a href="#">Кейсы</a><a href="#">Контакты</a></nav>
+            </div>
+            <div class="row__item"><a class="header__phone" href="tel:8 800 5555-087">8 800 5555-087</a>
+              <div class="header__button">Заказать звонок</div>
+            </div>
+          </div>
         </div>
       </header>
       <div class="content">
         <div class="start">
-          <div class="inner">
+          <div class="inner inner--relative">
             <h1 class="title title--start">Внедрим систему<br>менеджмента качества</h1>
             <h2 class="title title--start-h2">ГОСТ Р ИСО 9001-2015</h2>
             <div class="text text--srart">«Система менеджмента качества на соответствие»</div>
-            <div class="start__bg-img"><i class="svg-icon svg-start__bg-img"></i>
-            </div>
             <div class="button button--mg-t--30">Узнать подробнее</div>
+            <div class="start__bg-img"><img src="./images/start-bg.svg" alt="планета"></div>
           </div>
         </div>
         <div class="advant">
@@ -106,7 +112,7 @@
                     <h3 class="tariff__info-title">Стоимость внедрения</h3>
                     <p class="tariff__info-text">2-6 месяца</p>
                   </li>
-                </ul><a class="button tariff__button button" href="#modal" data-modal="tariff-1">Мне подходит </a>
+                </ul><a class="button tariff__button button--wd" href="#modal" data-modal="tariff-1">Мне подходит </a>
               </div>
               <div class="tariff">
                 <h2 class="tariff__title">Премиум</h2>
@@ -279,6 +285,11 @@
           </div>
         </div>
       </footer>
+    </div>
+    <div class="modals">
+      <div class="modal" data-modal="test">
+        <div class="modal-content">modal</div>
+      </div>
     </div>
     <script src="js/scripts.min.js"></script>
   </body>

@@ -8,15 +8,15 @@ block content
     .content
 
         .start
-            .inner
+            .inner.inner--relative
                 h1.title.title--start Внедрим систему
                     br
                     |менеджмента качества
                 h2.title.title--start-h2 ГОСТ Р ИСО 9001-2015
                 .text.text--srart «Система менеджмента качества на соответствие»
-                .start__bg-img
-                    +icon('start__bg-img', 'svg')
                 .button.button--mg-t--30 Узнать подробнее
+                .start__bg-img
+                    img(src="./images/start-bg.svg", alt="планета")
         
         .advant
             .inner
@@ -79,7 +79,7 @@ block content
                                     h3.tariff__info-title Стоимость внедрения
                                     p.tariff__info-text 2-6 месяца
 
-                            a.button.tariff__button(class = tariff ? "button" : "button--blue", href="#modal", data-modal="tariff-1") Мне подходит 
+                            a.button.tariff__button(class = tariff ? "button--wd" : "button--blue", href="#modal", data-modal="tariff-1") Мне подходит 
 
 
         .sale

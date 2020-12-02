@@ -1,7 +1,16 @@
 .inner {
+  width: 1430px;
   padding: 0 15px;
   max-width: 1430px;
   margin: 0 auto;
+
+  @include megaLarge {
+    width: 100%;
+  }
+
+  // @include extraLarge {
+  //   width: 992px;
+  // }
   
   &--flex{
     display: flex;

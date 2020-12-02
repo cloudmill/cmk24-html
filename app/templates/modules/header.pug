@@ -1,11 +1,17 @@
 header.header
-  .inner.inner--flex
-    .header__logo
-    nav.header__nav
-      a(href="#") Преимущества
-      a(href="#") Сроки и стоимость
-      a(href="#") Скидка 30%
-      a(href="#") Кейсы
-      a(href="#") Контакты
-    a.header__phone(href="tel:8 800 5555-087") 8 800 5555-087
-    .header__button Заказать звонок
+  .inner
+    .row
+      .row__item
+        .header__logo
+          img(src="./images/header-logo.svg", alt="лого")
+        .header__logo--scroll
+          img(src="./images/header-logo--scroll.svg", alt="лого")
+        nav.header__nav
+          a(href="#") Преимущества
+          a(href="#") Сроки и стоимость
+          a(href="#") Скидка 30%
+          a(href="#") Кейсы
+          a(href="#") Контакты
+      .row__item
+        a.header__phone(href="tel:8 800 5555-087") 8 800 5555-087
+        .header__button Заказать звонок

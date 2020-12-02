@@ -1,0 +1,15 @@
+$megaLarge: 1430px;
+$extraLarge: 1230px;
+
+
+@mixin megaLarge {
+  @media (max-width: $megaLarge){
+      @content;
+  }
+}
+
+@mixin extraLarge {
+  @media (max-width: $extraLarge){
+      @content;
+  }
+}
