@@ -7,26 +7,74 @@
   border-radius: 4px;
   color: white;
   cursor: pointer;
-
-  &--red {
-    background-color: #ff4021;
-    &:hover {
-      background-color: #ff2400;
-    }
-  }
-
-  &--mg-t--30 {
-    margin-top: 30px;
+  transition: all 0.2s;
+  background-color: #ff4021;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  &:hover {
+    background-color: #ff2400;
   }
 
   &--blue {
     width: 100%;
     border: 1px solid #006EFF;
     color: #006EFF;
-    font-size: 16px;
-    line-height: 21px;
+    background-color: white;
   }
+
+  &--red {
+    background-color: white;
+    border: 2px solid #FF4021;
+    color: #FF4021;
+    &:hover {
+      color: white;
+    }
+  }
+
+  &--slider {
+    width: 67px;
+    height: 67px;
+    border-radius: 4px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+    &::before {
+      content: '';
+      width: 15px;
+      height: 16px;
+      transition: all 0.2s;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url("data:image/svg+xml,%3Csvg width='15' height='16' viewBox='0 0 15 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.310303 7.73657H13.226M13.226 7.73657L6.76813 0.875122M13.226 7.73657L6.76813 14.598' stroke='%234998FF' stroke-width='1.2'/%3E%3C/svg%3E");
+    }
+    &:hover {
+      background-color: white;
+      &::before {
+        margin-left: 20px;
+      }
+    }
+  }
+  &--border--blue {
+    border: 1px solid #4997FF;
+  }
+
+  &--left {
+    transform: rotateY(-180deg);
+  }
+
+  &--mg-t--30 {
+    margin-top: 30px;
+  }
+
   &--mg-t--100 {
     margin-top: 100px;
   }
+
+  &--mg-t--75 {
+    margin-top: 75px;
+  }
+
 }

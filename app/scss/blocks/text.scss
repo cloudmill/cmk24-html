@@ -8,6 +8,7 @@
   }
 
   &--toolTip {
+    font-weight: 100;
     font-size: 18px;
     line-height: 140%;
     color: #0A0A0A;
@@ -18,7 +19,28 @@
     line-height: 130%;
     color: white;
   }
+
+  &--section-small {
+    font-size: 14px;
+    line-height: 127.98%;
+  }
+
+  &--italic {
+    font-style: italic;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+  }
+
+  &--mg-t--33 {
+    margin-top: 33px;
+  }
+
   &--mg-t--20 {
     margin-top: 20px;
+  }
+
+  &--mg-t--60 {
+    margin-top: 60px;
   }
 }
