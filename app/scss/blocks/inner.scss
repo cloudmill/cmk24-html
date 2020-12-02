@@ -8,9 +8,9 @@
     width: 100%;
   }
 
-  // @include extraLarge {
-  //   width: 992px;
-  // }
+  @include small {
+    padding: 0 10px;
+  }
   
   &--flex{
     display: flex;

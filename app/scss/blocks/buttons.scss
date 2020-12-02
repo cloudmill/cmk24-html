@@ -16,6 +16,13 @@
     background-color: #ff2400;
   }
 
+  @include medium {
+    width: 140px;
+    height: 35px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
   &--blue {
     width: 100%;
     border: 1px solid #006EFF;

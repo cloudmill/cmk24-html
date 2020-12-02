@@ -6,6 +6,8 @@
   border-bottom: 1px solid #A3CAFF;
   height: 20px;
   position: relative;
+  display: inline-block;
+  white-space: nowrap;
   &--icon {
     margin-right: 30px;
     &::before {

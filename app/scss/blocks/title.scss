@@ -14,8 +14,15 @@
   &--start {
     font-size: 55px;
     color: white;
+
+    @include large {
+      font-size: 42px;
+    }
+    @include medium {
+      font-size: 30px;
+    }
   }
-  
+
   &--footer {
     font-size: 60px;
     line-height: 127.98%;
@@ -25,6 +32,14 @@
     font-size: 32px;
     color: white;
     margin-top: 80px;
+
+    @include large {
+      font-size: 26px;
+    }
+    @include medium {
+      font-size: 20px;
+      margin-top: 40px;
+    }
   }
 
   &--subtitle {

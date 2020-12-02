@@ -5,6 +5,9 @@
     line-height: 120%;
     color: white;
     margin-top: 5px;
+    @include medium {
+      font-size: 12px;
+    }
   }
 
   &--toolTip {

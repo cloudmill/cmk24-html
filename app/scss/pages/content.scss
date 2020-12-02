@@ -3,20 +3,35 @@
   min-height: 300vh; // test
 }
 .start {
-  padding-top: 105px;
+  padding: 105px 0 178px 0;
   width: 100%;
   background: linear-gradient(282.12deg, #A2CAFF 19.54%, #4998FF 100%);
   padding-top: 105px;
-  padding-bottom: 178px;
   overflow: hidden;
+  @include large {
+    padding: 70px 0 130px 0;
+  }
+  @include small {
+    padding: 50px 0 70px 0;
+  }
 
   .start__bg-img {
     position: absolute;
-    top: 0;
-    right: -250px;
+    top: -35px;
+    right: -170px;
+    @include small {
+      top: 140px;
+      right: -80px;
+    }
     img {
       @include extraLarge {
         height: 700px;
+      }
+      @include large {
+        height: 550px;
+      }
+      @include small {
+        height: 190px;
       }
     }
   }
@@ -41,25 +56,52 @@
 .advant {
   padding: 80px 0;
 
-  &__conteiner {
+  &__row {
     display: flex;
-    flex-wrap: wrap;
-    margin-top: 60px;
+    & :last-child {
+      margin-right: 0;
+    }
+    @include extraLarge {
+      flex-direction: column;
+    }
   }
-  .toolTip {
-    width: 680px;
+  &__colomn {
+    width: 100%;
+    margin-top: 60px;
+    & .advant__row:last-child {
+      margin-top: 20px;
+      @include extraLarge {
+        margin-top: 0;
+      }
+    }
+    @media (max-width: 1240px){
+      width: 100%;
+    }
+  }
+  &__item {
+    width: 50%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 50px;
     background-color: #F2F7FF;
     border-radius: 4px;
-    margin: 0 20px 20px 0;
-    @include megaLarge {
-      margin: 20px auto;
+    margin-right: 20px;
+    @include extraLarge {
+      width: 100%;
+      margin: 20px 0 0 0;
+    }
+    @include large {
+      padding: 35px;
+    }
+    @media (max-width: 630px){
+      display: block;
+      padding: 20px;
+      font-size: 14px;
+      line-height: 140%;
     }
   }
-  .bg-circle {
+  .item-icon {
     position: relative;
     background-color: white;
     width: 70px;
@@ -68,6 +110,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0;
+    margin-right: 40px;
+    @include medium {
+      margin-right: 20px;
+    }
+  }
+  &__content {
+    display: flex;
+    align-items: center;
+  }
+  .item-link {
+    margin-left: 20px;
+    @media (max-width: 630px) {
+      margin: 20px 0 0 90px;
+    }
   }
 }
 .sale {
