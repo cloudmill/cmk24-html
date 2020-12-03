@@ -28,6 +28,10 @@
     border: 1px solid #006EFF;
     color: #006EFF;
     background-color: white;
+    &:hover {
+      background: #006EFF;
+      color: white;
+    }
   }
 
   &--red {
