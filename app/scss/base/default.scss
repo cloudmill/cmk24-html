@@ -1,3 +1,26 @@
+// ПОДКЛЮЧЕНИЕ ШРИФТОВ
+
+@font-face {
+  font-family: "stem";
+  font-weight: 400;
+  src: url('../fonts/stem-regular.eot');
+  src: url('../fonts/stem-regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/stem-regular.woff2') format('woff2'), 
+  url('../fonts/stem-regular.woff') format('woff'),
+  url('../fonts/stem-regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "stem";
+  font-weight: 500;
+  src: url('../fonts/stem-medium.otf');
+  src: url('../fonts/stem-medium.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/stem-medium.eot') format('embedded-opentype'),
+  url('../fonts/stem-medium.woff2') format('woff2'), 
+  url('../fonts/stem-medium.woff') format('woff'),
+  url('../fonts/stem-medium.ttf') format('truetype');
+}
+
 /* ##########
 Убираем outline
 ########## */
@@ -59,7 +82,12 @@ body {
 }
 
 body {
-  font-family: $font-main; // Задаем основной шрифт
+  font-family: $font-main; // задаем основной шрифт
+  font-smooth: auto !important;
+  text-rendering: geometricPrecision !important;
+  text-rendering: geometricprecision !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
   font-size: 16px; // Убираем проблему с отступами между inline-элементами
   color: $color-basic;
   overflow: hidden;

@@ -41,7 +41,7 @@ let _ = {
   },
   fonts: {
     dir: dirApp + "static/fonts/",
-    select: "**/*.{otf,ttf,woff,woff2}",
+    select: "**/*.{otf,ttf,woff,woff2,eot}",
   },
   minImg: {
     dir: dirApp + "static/images/",
@@ -168,11 +168,14 @@ gulp.task("svgSprite", function () {
 
 /////Работа со шрифтами
 gulp.task("font2css", function () {
+  // return gulp
+  //   .src(_.fonts.dir + _.fonts.select)
+  //   .pipe(font2css())
+  //   .pipe(concat("fonts.css"))
+  //   .pipe(gulp.dest(_.style.base))
   return gulp
     .src(_.fonts.dir + _.fonts.select)
-    .pipe(font2css())
-    .pipe(concat("fonts.css"))
-    .pipe(gulp.dest(_.style.base))
+    .pipe(gulp.dest(_.dist.fonts));
 });
 
 /////Работа с шаблонами страниц
