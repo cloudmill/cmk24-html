@@ -1,0 +1,12 @@
+.modal-form {
+    padding: 90px 125px 100px 125px;
+    min-height: 550px;
+    background-color: white;
+    border-radius: 4px;
+
+
+    &__title {
+        font-size: 20px;
+        line-height: 120%;
+    }
+}

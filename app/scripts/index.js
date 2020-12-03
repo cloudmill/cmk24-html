@@ -1,13 +1,20 @@
 import $ from "jquery";
-import App from "./main.js";
-import "./modal";
+import App from "./main";
 import Swiper from "swiper";
 
 $(document).ready(function() {
-  let app = new App();
+
+  // HEADER
   headerScroll();
+
+
+  // SLIDERS
   slider();
-  mySwiper();
+
+
+  // MODALS
+  modal();
+
 });
 
 let headerScroll = function() {
@@ -52,4 +59,27 @@ function slider() {
           });
       
   });
+}
+
+function modal() {
+
+  $(".js--modal").on("click", function () {
+
+    const modal = $(this).attr("href");
+
+    $(".modal").addClass("modal--active");
+    $(modal).addClass("modal__item--active");
+
+
+    $(".modal").on("click", event => {
+      if (!event.target.classList.contains("modal__content")) {
+
+        $(".modal").removeClass("modal--active");
+        $(".modal__item--active").removeClass("modal__item--active");
+
+      }
+    })
+
+  });
+
 }

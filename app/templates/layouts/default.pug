@@ -14,8 +14,27 @@ html(lang="ru")
             block content
             include ../modules/footer
 
-        .modals
-            .modal(data-modal="test")
-                .modal-content modal
+        .modal
+            mixin modal__item(id = "test")
+                .modal__item(id = id)
+                    button.modal__close
+                        .modal__close-icon
+                            +icon("cross", "svg")
+                    .modal__content
+                        block
+            
+            +modal__item("question")
+                .modal-form
+                    .modal-form__title Задать вопрос по внедрению СМК
+                    form(action="").form.modal-form__form
+                        input(type="text", name="name", placeholder="Ваше имя").form__input
+                        input(type="text", name="e-mail", placeholder="Ваш e-mail").form__input
+
+            +modal__item("call")
+                .modal-form
+                    .modal-form__title Задать вопрос по внедрению СМК
+                    form(action="").form.modal-form__form
+                        input(type="text", name="name", placeholder="Ваше имя").form__input
+                        input(type="text", name="e-mail", placeholder="Ваш e-mail").form__input
 
         script(src='js/scripts.min.js')
