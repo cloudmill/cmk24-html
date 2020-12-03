@@ -1,70 +1,74 @@
-.tariff {
-    padding: 40px 0 55px;
-    flex-basis: 24.365482233%;
-    box-sizing: content-box;
-
-    &:not(:first-child) {
-        margin-left: 50px;
-    }
-
-
-    &--highlight {
-        position: relative;
-        padding-left: 50px;
-        padding-right: 50px;
-        flex-basis: 26.903553299%;
-
-        &::before {
-            position: absolute;
-            $size: 5px;
-            top: -$size;
-            bottom: -$size;
-            left: 0;
-            right: 0;
-            content: "";
-            display: block;
-            background-color: #4998FF;
-            border-radius: 4px;
-        }
-
-
-        & > * {
-            position: relative;
-            color: white;
-        }
-    }
-
-
-    &__title {
-        font-size: 30px;
-        line-height: 39px;
-    }
-
-
-    &__info {
-        margin-top: 45px;
-    }
-
-    &__info-item {
+    .tariff {
+        padding: 40px 0 55px;
+        flex-basis: 24.365482233%;
+        box-sizing: content-box;
 
         &:not(:first-child) {
-            margin-top: 27px;
+            margin-left: 50px;
+        }
+
+        @include extraLarge {
+            width: calc(100% - 30px / 2);
+        }
+
+
+        &--highlight {
+            position: relative;
+            padding-left: 50px;
+            padding-right: 50px;
+            flex-basis: 26.903553299%;
+
+            &::before {
+                position: absolute;
+                $size: 5px;
+                top: -$size;
+                bottom: -$size;
+                left: 0;
+                right: 0;
+                content: "";
+                display: block;
+                background-color: #4998FF;
+                border-radius: 4px;
+            }
+
+
+            & > * {
+                position: relative;
+                color: white;
+            }
+        }
+
+
+        &__title {
+            font-size: 30px;
+            line-height: 39px;
+        }
+
+
+        &__info {
+            margin-top: 45px;
+        }
+
+        &__info-item {
+
+            &:not(:first-child) {
+                margin-top: 27px;
+            }
+        }
+
+        &__info-title {
+            font-size: 12px;
+            line-height: 15px;
+        }
+
+        &__info-text {
+            font-size: 24px;
+            line-height: 31px;
+        }
+
+
+
+        &__button {
+            margin-top: auto;
         }
     }
-
-    &__info-title {
-        font-size: 12px;
-        line-height: 15px;
-    }
-
-    &__info-text {
-        font-size: 24px;
-        line-height: 31px;
-    }
-
-
-
-    &__button {
-        margin-top: auto;
-    }
-}

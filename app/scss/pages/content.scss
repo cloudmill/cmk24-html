@@ -51,6 +51,10 @@
     align-items: stretch;
     border: 1px solid #D0E4FF;
     border-radius: 4px;
+    @include extraLarge {
+      flex-wrap: wrap;
+      border: none;
+    }
   }
 }
 .advant {
