@@ -7,6 +7,13 @@
   justify-content: space-between;
   align-items: center;
 
+  @include large {
+    font-size: 40px;
+  }
+  @include medium {
+    font-size: 30px;
+  }
+
   &--white {
     color: white;
   }
@@ -26,6 +33,12 @@
   &--footer {
     font-size: 60px;
     line-height: 127.98%;
+    @include large {
+      font-size: 42px;
+    }
+    @include medium {
+      font-size: 36px;
+    }
   }
 
   &--start-h2 {
@@ -45,16 +58,32 @@
   &--subtitle {
     font-size: 26px;
     line-height: 35px;
+    @include large {
+      font-size: 23px;
+    }
+    @include small {
+      font-size: 20px;
+    }
   }
 
   &--subtitle-small {
     font-weight: 500;
     font-size: 24px;
     line-height: 31px;
+    @include large {
+      font-size: 22px;
+    }
+    @include small {
+      font-size: 20px;
+    }
   }
 
   &--mg-t--20 {
     margin-top: 20px;
+  }
+
+  &--mg-t--35 {
+    margin-top: 35px;
   }
   
 }

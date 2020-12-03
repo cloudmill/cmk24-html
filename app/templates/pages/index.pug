@@ -13,7 +13,7 @@ block content
                     br
                     |менеджмента качества
                 h2.title.title--start-h2 ГОСТ Р ИСО 9001-2015
-                .text.text--srart «Система менеджмента качества на соответствие»
+                .text.text--start «Система менеджмента качества на соответствие»
                 a.button.button--mg-t--30.js--modal(href="#call") Узнать подробнее
                 .start__bg-img
                     img(src="./images/start-bg.svg", alt="планета")
@@ -64,41 +64,101 @@ block content
             .inner
 
                 .tariffs__list
+
+                    .tariff
                     
-                    each tariff in [0, 0, 1, 0]
-
-                        .tariff(class = tariff ? "tariff--highlight" : "")
+                        h2.tariff__title Премиум
                         
-                            h2.tariff__title Премиум
-                            
-                            button.tariff__description.js--tooltip(data-tooltip="tariff-1")
+                        button.tariff__description.js--tooltip(data-tooltip="tariff-1")
 
-                                .help-link(class = tariff ? "help-link--white" : "") Описание
-                            
-                            ul.tariff__info
+                            .help-link Описание
+                        
+                        ul.tariff__info
 
-                                li.tariff__info-item
-                                    h3.tariff__info-title Стоимость внедрения
-                                    p.tarigg__info-text от 78 000 ₽
-                                    
-                                li.tariff__info-item
-                                    h3.tariff__info-title Стоимость внедрения
-                                    p.tariff__info-text 2-6 месяца
+                            li.tariff__info-item
+                                h3.tariff__info-title Стоимость внедрения
+                                p.tariff__info-text от 78 000 ₽
+                                
+                            li.tariff__info-item
+                                h3.tariff__info-title Стоимость внедрения
+                                p.tariff__info-text 2-6 месяца
 
-                            a.button.tariff__button(class = tariff ? "button--wd" : "button--blue", href="#modal", data-modal="tariff-1") Мне подходит 
+                        a.tariff__button.button.button--blue( href="#modal", data-modal="tariff-1") Мне подходит 
+                    
+                    .tariff
+                    
+                        h2.tariff__title Стандарт
+                        
+                        button.tariff__description.js--tooltip(data-tooltip="tariff-1")
+
+                            .help-link Описание
+                        
+                        ul.tariff__info
+
+                            li.tariff__info-item
+                                h3.tariff__info-title Стоимость внедрения
+                                p.tariff__info-text от 47 000 ₽
+                                
+                            li.tariff__info-item
+                                h3.tariff__info-title Стоимость внедрения
+                                p.tariff__info-text 1,5-3 месяца
+
+                        a.tariff__button.button.button--blue( href="#modal", data-modal="tariff-1") Мне подходит 
+                        
+                    .tariff.tariff--highlight
+                    
+                        h2.tariff__title Базовый
+                        
+                        button.tariff__description.js--tooltip(data-tooltip="tariff-1")
+
+                            .help-link.help-link--white Описание
+                        
+                        ul.tariff__info
+
+                            li.tariff__info-item
+                                h3.tariff__info-title Стоимость внедрения
+                                p.tariff__info-text от 32 000 ₽
+                                
+                            li.tariff__info-item
+                                h3.tariff__info-title Стоимость внедрения
+                                p.tariff__info-text 1-2 месяца
+
+                        a.button.tariff__button.button--wd( href="#modal", data-modal="tariff-1") Мне подходит 
+
+                    .tariff
+                    
+                        h2.tariff__title Смарт
+                        
+                        button.tariff__description.js--tooltip(data-tooltip="tariff-1")
+
+                            .help-link Описание
+                        
+                        ul.tariff__info
+
+                            li.tariff__info-item
+                                h3.tariff__info-title Стоимость внедрения
+                                p.tariff__info-text от 35 000 ₽
+                                
+                            li.tariff__info-item
+                                h3.tariff__info-title Стоимость внедрения
+                                p.tariff__info-text 1-1,5 месяц
+
+                        a.tariff__button.button.button--blue( href="#modal", data-modal="tariff-1") Мне подходит 
 
 
         .sale
             .inner.inner--small.inner--relative
-                .title.title--white Скидка 30%
-                .text.text--section.text--mg-t--20 Ответьте на несколько вопросов
-                    br
-                    |и получите скидку!
-                .button.button--mg-t--100 Получить скидку
-                .percent
-                    p -30%
-                    p -30%
-                    p -30%
+                .sale__conteiner
+                    .sale__box
+                        .title.title--white Скидка 30%
+                        .text.text--section.text--mg-t--20 Ответьте на несколько вопросов 
+                            br
+                            |и получите скидку!
+                        .button.button--mg-t--100 Получить скидку
+                        .percent
+                            p -30%
+                            p -30%
+                            p -30%
 
 
         .package
@@ -132,10 +192,11 @@ block content
                     |по внедрению ИСО 
                     br
                     |на предприятии
-                .title.title--subtitle Игорь Державин
+                .photo
+                    img.businessman(src="./images/businessman.png", alt="Бизнессмен")
+                .title.title--subtitle.title--mg-t--35 Игорь Державин
                 .text.text--toolTip.text--mg-t--20 cпециалист по внедрению ИСО
                 .button.button--mg-t--75 Задать вопрос
-                img.businessman(src="./images/businessman.png", alt="Бизнессмен")
     .slider-block.case
         .inner.inner--small
             .block-row
@@ -188,21 +249,21 @@ block content
                         img(src="./images/screen.png", alt="благодарность")
                         .conteiner
                             .text.text--italic Благодарим компанию "СМК24" в частности Ведущего специалиста Игорю Державину, за высокое качество и оперативность оказанных услуг по сертификации систем менеджмента. Главным достоинством Ваших сотрудников является умение быстро, квалифицированно и добросовестно выполнять поставленные задачи, также обязанность и аккуратность, проявленные в процессе работы.
-                            .text.text--start.text--mg-t--20 Заместитель директора ООО "Красноярская Геоархеология" А.Ю. Дубатов
+                            .text.text--start.text--mg-t--20.text--black Заместитель директора ООО "Красноярская Геоархеология" А.Ю. Дубатов
                     .swiper-slide.card
                         img(src="./images/screen.png", alt="благодарность")
                         .conteiner
                             .text.text--italic Благодарим компанию "СМК24" в частности Ведущего специалиста Игорю Державину, за высокое качество и оперативность оказанных услуг по сертификации систем менеджмента. Главным достоинством Ваших сотрудников является умение быстро, квалифицированно и добросовестно выполнять поставленные задачи, также обязанность и аккуратность, проявленные в процессе работы.
-                            .text.text--start.text--mg-t--20 Заместитель директора ООО "Красноярская Геоархеология" А.Ю. Дубатов
+                            .text.text--start.text--mg-t--20.text--black Заместитель директора ООО "Красноярская Геоархеология" А.Ю. Дубатов
                     .swiper-slide.card
                         img(src="./images/screen.png", alt="благодарность")
                         .conteiner
                             .text.text--italic Благодарим компанию "СМК24" в частности Ведущего специалиста Игорю Державину, за высокое качество и оперативность оказанных услуг по сертификации систем менеджмента. Главным достоинством Ваших сотрудников является умение быстро, квалифицированно и добросовестно выполнять поставленные задачи, также обязанность и аккуратность, проявленные в процессе работы.
-                            .text.text--start.text--mg-t--20 Заместитель директора ООО "Красноярская Геоархеология" А.Ю. Дубатов
+                            .text.text--start.text--mg-t--20.text--black Заместитель директора ООО "Красноярская Геоархеология" А.Ю. Дубатов
                     .swiper-slide.card
                         img(src="./images/screen.png", alt="благодарность")
                         .conteiner
                             .text.text--italic Благодарим компанию "СМК24" в частности Ведущего специалиста Игорю Державину, за высокое качество и оперативность оказанных услуг по сертификации систем менеджмента. Главным достоинством Ваших сотрудников является умение быстро, квалифицированно и добросовестно выполнять поставленные задачи, также обязанность и аккуратность, проявленные в процессе работы.
-                            .text.text--start.text--mg-t--20 Заместитель директора ООО "Красноярская Геоархеология" А.Ю. Дубатов
+                            .text.text--start.text--mg-t--20.text--black Заместитель директора ООО "Красноярская Геоархеология" А.Ю. Дубатов
                 
   

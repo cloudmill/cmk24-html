@@ -16,11 +16,13 @@
     background-color: #ff2400;
   }
 
-  @include medium {
-    width: 140px;
-    height: 35px;
-    font-size: 12px;
-    line-height: 15px;
+  &--header {
+    @include medium {
+      width: 140px;
+      height: 35px;
+      font-size: 12px;
+      line-height: 15px;
+    }
   }
 
   &--blue {
@@ -88,9 +90,17 @@
   &--mg-t--75 {
     margin-top: 75px;
   }
+
+  &--mg-t--117 {
+    margin-top: 117px;
+  }
   
   &--wd {
     width: 100%;
+  }
+
+  &--wd--240 {
+    width: 240px;
   }
 
 }
