@@ -1,13 +1,18 @@
 .tariff {
-    padding: 40px 25px 55px 25px;
-    width: calc((100% - 50px) / 4);
+    padding: 40px 0 55px;
+    flex-basis: 24.365482233%;
+    box-sizing: content-box;
+
+    &:not(:first-child) {
+        margin-left: 50px;
+    }
 
 
     &--highlight {
         position: relative;
-        margin: 0 25px;
         padding-left: 50px;
         padding-right: 50px;
+        flex-basis: 26.903553299%;
 
         &::before {
             position: absolute;

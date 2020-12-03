@@ -3,20 +3,35 @@
   min-height: 300vh; // test
 }
 .start {
-  padding-top: 105px;
+  padding: 105px 0 178px 0;
   width: 100%;
   background: linear-gradient(282.12deg, #A2CAFF 19.54%, #4998FF 100%);
   padding-top: 105px;
-  padding-bottom: 178px;
   overflow: hidden;
+  @include large {
+    padding: 70px 0 130px 0;
+  }
+  @include small {
+    padding: 50px 0 70px 0;
+  }
 
   .start__bg-img {
     position: absolute;
-    top: 0;
-    right: -250px;
+    top: -35px;
+    right: -170px;
+    @include small {
+      top: 140px;
+      right: -80px;
+    }
     img {
       @include extraLarge {
         height: 700px;
+      }
+      @include large {
+        height: 550px;
+      }
+      @include small {
+        height: 190px;
       }
     }
   }
@@ -41,25 +56,52 @@
 .advant {
   padding: 80px 0;
 
-  &__conteiner {
+  &__row {
     display: flex;
-    flex-wrap: wrap;
-    margin-top: 60px;
+    & :last-child {
+      margin-right: 0;
+    }
+    @include extraLarge {
+      flex-direction: column;
+    }
   }
-  .toolTip {
-    width: 680px;
+  &__colomn {
+    width: 100%;
+    margin-top: 60px;
+    & .advant__row:last-child {
+      margin-top: 20px;
+      @include extraLarge {
+        margin-top: 0;
+      }
+    }
+    @media (max-width: 1240px){
+      width: 100%;
+    }
+  }
+  &__item {
+    width: 50%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 50px;
     background-color: #F2F7FF;
     border-radius: 4px;
-    margin: 0 20px 20px 0;
-    @include megaLarge {
-      margin: 20px auto;
+    margin-right: 20px;
+    @include extraLarge {
+      width: 100%;
+      margin: 20px 0 0 0;
+    }
+    @include large {
+      padding: 35px;
+    }
+    @media (max-width: 630px){
+      display: block;
+      padding: 20px;
+      font-size: 14px;
+      line-height: 140%;
     }
   }
-  .bg-circle {
+  .item-icon {
     position: relative;
     background-color: white;
     width: 70px;
@@ -68,6 +110,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0;
+    margin-right: 40px;
+    @include medium {
+      margin-right: 20px;
+    }
+  }
+  &__content {
+    display: flex;
+    align-items: center;
+  }
+  .item-link {
+    margin-left: 20px;
+    @media (max-width: 630px) {
+      margin: 20px 0 0 90px;
+    }
   }
 }
 .sale {
@@ -108,12 +165,24 @@
 }
 .package {
   margin-top: 80px;
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: 860px){
+      display: block;
+      .link {
+        margin-top: 30px;
+      }
+    }
+  }
   
   .conteiner-dokx {
     padding-top: 60px;
     display: flex;
     flex-wrap: wrap;
-    @include extraLarge {
+    @media (max-width: 1230px){
       justify-content: center;
     }
   }
@@ -134,6 +203,12 @@
       background-repeat: no-repeat;
       background-position: center;
       background-image: url("data:image/svg+xml,%3Csvg width='29' height='41' viewBox='0 0 29 41' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M28.5 11.417V36.0605C28.5 38.2697 26.7091 40.0605 24.5 40.0605H4.5C2.29086 40.0605 0.5 38.2697 0.5 36.0605V5.06055C0.5 2.85141 2.29086 1.06055 4.5 1.06055H18.0232M28.5 11.417H22.0232C19.814 11.417 18.0232 9.62615 18.0232 7.41701V1.06055M28.5 11.417L18.0232 1.06055' stroke='%234998FF'/%3E%3C/svg%3E");
+    }
+    @media (max-width: 1230px){
+      width: 46%;
+    }
+    @media (max-width: 820px){
+      width: 100%;
     }
   }
 }

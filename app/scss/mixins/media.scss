@@ -1,6 +1,8 @@
 $megaLarge: 1430px;
-$extraLarge: 1230px;
-
+$extraLarge: 1050px;
+$large: 992px;
+$medium: 776px; 
+$small: 576px;
 
 @mixin megaLarge {
   @media (max-width: $megaLarge){
@@ -10,6 +12,24 @@ $extraLarge: 1230px;
 
 @mixin extraLarge {
   @media (max-width: $extraLarge){
+      @content;
+  }
+}
+
+@mixin large {
+  @media (max-width: $large){
+      @content;
+  }
+}
+
+@mixin medium {
+  @media (max-width: $medium){
+      @content;
+  }
+}
+
+@mixin small {
+  @media (max-width: $small){
       @content;
   }
 }
