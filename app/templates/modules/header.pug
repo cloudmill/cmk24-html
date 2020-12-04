@@ -1,5 +1,23 @@
 header.header
-  .inner
+  .burger
+    span
+    span
+    span
+  .burger-menu
+    ul
+      li
+        img(src="./images/header-logo.svg", alt="лого")
+      li
+        a(href="#").burger-menu__item Преимущества
+      li
+        a(href="#").burger-menu__item Сроки и стоимость
+      li
+        a(href="#").burger-menu__item Скидка 30%
+      li
+        a(href="#").burger-menu__item Кейсы
+      li
+        a(href="#").burger-menu__item Контакты
+  .inner.inner--relative
     .row
       .row__item
         .header__logo

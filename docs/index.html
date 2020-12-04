@@ -9,7 +9,18 @@
   <body>
     <div class="wrapper">
       <header class="header">
-        <div class="inner">
+        <div class="burger"><span></span><span></span><span></span></div>
+        <div class="burger-menu">
+          <ul>
+            <li><img src="./images/header-logo.svg" alt="лого"></li>
+            <li><a class="burger-menu__item" href="#">Преимущества</a></li>
+            <li><a class="burger-menu__item" href="#">Сроки и стоимость</a></li>
+            <li><a class="burger-menu__item" href="#">Скидка 30%</a></li>
+            <li><a class="burger-menu__item" href="#">Кейсы</a></li>
+            <li><a class="burger-menu__item" href="#">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="inner inner--relative">
           <div class="row">
             <div class="row__item">
               <div class="header__logo"><img src="./images/header-logo.svg" alt="лого"></div>
@@ -27,7 +38,7 @@
           <div class="inner inner--relative">
             <h1 class="title title--start">Внедрим систему<br>менеджмента качества</h1>
             <h2 class="title title--start-h2">ГОСТ Р ИСО 9001-2015</h2>
-            <div class="text text--start">«Система менеджмента качества на соответствие»</div><a class="button button--mg-t--30 js--modal" href="#call">Узнать подробнее</a>
+            <div class="text text--start">«Система менеджмента качества на соответствие»</div><a class="button button--mg-t--30 button--start js--modal" href="#call">Узнать подробнее</a>
             <div class="start__bg-img"><img src="./images/start-bg.svg" alt="планета"></div>
           </div>
         </div>
@@ -123,7 +134,7 @@
                     <h3 class="tariff__info-title">Стоимость внедрения</h3>
                     <p class="tariff__info-text">1-2 месяца</p>
                   </li>
-                </ul><a class="button tariff__button button--wd" href="#modal" data-modal="tariff-1">Мне подходит </a>
+                </ul><a class="button tariff__button" href="#modal" data-modal="tariff-1">Мне подходит </a>
               </div>
               <div class="tariff">
                 <h2 class="tariff__title">Смарт</h2>
@@ -150,7 +161,7 @@
               <div class="sale__box">
                 <div class="title title--white">Скидка 30%</div>
                 <div class="text text--section text--mg-t--20">Ответьте на несколько вопросов <br>и получите скидку!</div>
-                <div class="button button--mg-t--100">Получить скидку</div>
+                <div class="button button--mg-t--100 button--wd--240">Получить скидку</div>
                 <div class="percent">
                   <p>-30%</p>
                   <p>-30%</p>
@@ -194,7 +205,7 @@
             <div class="photo"><img class="businessman" src="./images/businessman.png" alt="Бизнессмен"></div>
             <div class="title title--subtitle title--mg-t--35">Игорь Державин</div>
             <div class="text text--toolTip text--mg-t--20">cпециалист по внедрению ИСО</div>
-            <div class="button button--mg-t--75">Задать вопрос</div>
+            <div class="button button--wd--240 button--mg-t--75">Задать вопрос</div>
           </div>
         </div>
       </div>

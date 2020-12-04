@@ -1,5 +1,5 @@
 .button {
-  width: 240px;
+  width: 100%;
   height: 60px;
   display: flex;
   justify-content: center;
@@ -70,6 +70,16 @@
       }
     }
   }
+  &--start {
+    width: 240px;
+    @include medium {
+      width: 140px ;
+      height: 50px;
+      font-size: 12px;
+      line-height: 15px;
+
+    }
+  }
 
   &--border--blue {
     border: 1px solid #4997FF;
@@ -93,10 +103,6 @@
 
   &--mg-t--117 {
     margin-top: 117px;
-  }
-  
-  &--wd {
-    width: 100%;
   }
 
   &--wd--240 {
