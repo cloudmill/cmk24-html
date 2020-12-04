@@ -8,7 +8,10 @@ $(document).ready(function() {
   headerScroll();
 
 
-  burger()
+  burger();
+
+
+  cllick ();
 
 
   // SLIDERS
@@ -114,4 +117,26 @@ function modal() {
 
   });
 
+}
+
+
+
+
+function cllick () {
+  $('.button').on('click', function(e){
+    $(this).append('<div class = circle></div>')
+
+      var position = $(this).offset();
+      var topX = (e.pageX - (position.left+65));
+      var leftY = (e.pageY - (position.top+65));
+      $('.circle').css({
+        'top': leftY + 'px',
+        'left': topX + 'px',
+      });
+  });
+
+  $('.button').on('mouseup', function(){
+    $('.circle').remove()
+  });
+  
 }
