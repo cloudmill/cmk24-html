@@ -110,10 +110,11 @@ function modal() {
 
 
     $(".modal").on("click", event => {
-      if (!event.target.classList.contains("modal__content")) {
+      if ($(event.target).hasClass("modal") || $(event.target).hasClass("modal__close")) {
 
         $(".modal").removeClass("modal--active");
         $(".modal__item--active").removeClass("modal__item--active");
+        console.log('vfg')
 
       }
     })
@@ -148,29 +149,41 @@ function cllick () {
 
 
 function tooltip () {
-
   var name;
-  var link;
-
-  $('.link').on('mouseenter', function(){
-    link = $(this);
+  $('.link').on('click', function(){
+    if (name !== ('#tool-' + $(this).attr('id'))){
+      $(name).removeClass('tool-active');
+      $(name).removeClass('tool-activel');
+      $('.arrow').removeClass('arrow-block');
+      $('.arrowl').removeClass('arrow-block');
+    }
     name = ('#tool-' + $(this).attr('id'));
-    $(name).addClass('tool-active');
-    $(this, '.arrow').css('display', 'block');
+    $(this).children('.arrow').toggleClass('arrow-block');
+    $(this).children('.arrowl').toggleClass('arrow-block');
+    if ($(this).hasClass('left')){
+      $(name).toggleClass('tool-activel');
+    }else{
+      $(name).toggleClass('tool-active');
+    }
+    
   });
-  $('.link').on('mouseleave', function(){
-    link = $(this);
-    name = ('#tool-' + $(this).attr('id'));
-    $(name).removeClass('tool-active');
-  });
-  $('.left').on('mouseenter', function(){
-    link = $(this);
-    name = ('#tool-' + $(this).attr('id'));
-    $(name).addClass('tool-activel');
-  });
-  $('.left').on('mouseleave', function(){
-    link = $(this);
-    name = ('#tool-' + $(this).attr('id'));
-    $(name).removeClass('tool-activel');
-  });
+  // $('.link').on('mouseleave', function(){
+  //   link = $(this);
+  //   name = ('#tool-' + $(this).attr('id'));
+  //   $(name).removeClass('tool-active');
+  // });
+  // $('.left').on('click', function(){
+  //   if (name !== ('#tool-' + $(this).attr('id'))){
+  //     $(name).removeClass('tool-activel');
+  //     console.log(name);
+  //   }
+  //   name = ('#tool-' + $(this).attr('id'));
+  //   $(name).toggleClass('tool-activel');
+  //   name = 0;
+  // });
+  // $('.left').on('mouseleave', function(){
+  //   link = $(this);
+  //   name = ('#tool-' + $(this).attr('id'));
+  //   $(name).removeClass('tool-activel');
+  // });
 }
