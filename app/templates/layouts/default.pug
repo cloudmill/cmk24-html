@@ -38,7 +38,9 @@ html(lang="ru")
                         input(type="text", name="e-mail", placeholder="Ваш e-mail").form__input
                     .button Отправить
                     .modal-form__consent
-                        inpute(type="checkbox")
+                        .consent-checkbox
+                            label.check(for="check")
+                                input(type="checkbox" id="check")
                         |Согласие на обработку персональных данных в соответствии с политикой конфиденциальности
 
         script(src='js/scripts.min.js')

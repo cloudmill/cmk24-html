@@ -167,23 +167,4 @@ function tooltip () {
     }
     
   });
-  // $('.link').on('mouseleave', function(){
-  //   link = $(this);
-  //   name = ('#tool-' + $(this).attr('id'));
-  //   $(name).removeClass('tool-active');
-  // });
-  // $('.left').on('click', function(){
-  //   if (name !== ('#tool-' + $(this).attr('id'))){
-  //     $(name).removeClass('tool-activel');
-  //     console.log(name);
-  //   }
-  //   name = ('#tool-' + $(this).attr('id'));
-  //   $(name).toggleClass('tool-activel');
-  //   name = 0;
-  // });
-  // $('.left').on('mouseleave', function(){
-  //   link = $(this);
-  //   name = ('#tool-' + $(this).attr('id'));
-  //   $(name).removeClass('tool-activel');
-  // });
 }

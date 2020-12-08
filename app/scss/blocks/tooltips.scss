@@ -87,3 +87,21 @@
   }
 }
 
+
+
+.tariff-tool {
+  @include extraLarge {
+    left: -25px;
+    top: 180%;
+    transform: translateY(0);
+  }
+}
+.tariff-arrow {
+  @include extraLarge {
+    top: 150%;
+    right: 50%;
+    border-left: 1px solid #D0E4FF;
+    border-right: none;
+  }
+}
+
