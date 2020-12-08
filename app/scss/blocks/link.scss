@@ -8,6 +8,7 @@
   position: relative;
   display: inline-block;
   white-space: nowrap;
+  cursor: pointer;
   &--icon {
     margin-right: 30px;
     &::before {
@@ -24,5 +25,14 @@
   }
   &--mg-t--70 {
     margin-top: 70px;
+  }
+
+  &:hover {
+    .arrow {
+      display: block;
+    }
+    .arrowl {
+      display: block;
+    }
   }
 }

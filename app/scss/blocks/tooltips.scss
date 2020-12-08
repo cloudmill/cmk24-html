@@ -1,0 +1,56 @@
+.tooltip {
+  position: absolute;
+  width: 296px;
+  display: none;
+  background-color: white;
+  border: 1px solid #D0E4FF;
+  border-radius: 4px;
+  padding: 26px 26px 26px 34px;
+  font-size: 12px;
+  line-height: 15px;
+  color: #4998FF;
+  white-space: normal;
+  z-index: 2;
+}
+
+.arrow {
+  position: absolute;
+  display: none;
+  width: 8px;
+  height: 8px;
+  transform: rotate(45deg) translate(-50%, 50%);
+  background-color: white;
+  left: calc(100% + 14px);
+  top: calc(0 + 50%);
+  z-index: 2;
+  border-bottom: 1px solid #D0E4FF;
+  border-left: 1px solid #D0E4FF;
+}
+.arrowl {
+  position: absolute;
+  display: none;
+  width: 8px;
+  height: 8px;
+  transform: rotate(45deg) translate(-50%, 50%);
+  background-color: white;
+  right: calc(100% + 2px);
+  top: calc(0 + 50%);
+  z-index:2;
+  border-top: 1px solid #D0E4FF;
+  border-right: 1px solid #D0E4FF;
+}
+
+
+
+.tool-active {
+  left: calc(100% + 12px);
+  transform: translateY(-50%);
+  display: block;
+}
+.tool-activel {
+  right: calc(100% + 12px);
+  left: auto;
+  transform: translateY(-50%);
+  display: block;
+}
+

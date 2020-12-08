@@ -1,6 +1,7 @@
 import $ from "jquery";
 import App from "./main";
 import Swiper from "swiper";
+import { createPopper } from '@popperjs/core';
 
 $(document).ready(function() {
 
@@ -12,6 +13,8 @@ $(document).ready(function() {
 
 
   cllick ();
+
+  tooltip ()
 
 
   // SLIDERS
@@ -139,4 +142,35 @@ function cllick () {
     $('.circle').remove()
   });
   
+}
+
+
+
+
+function tooltip () {
+
+  var name;
+  var link;
+
+  $('.link').on('mouseenter', function(){
+    link = $(this);
+    name = ('#tool-' + $(this).attr('id'));
+    $(name).addClass('tool-active');
+    $(this, '.arrow').css('display', 'block');
+  });
+  $('.link').on('mouseleave', function(){
+    link = $(this);
+    name = ('#tool-' + $(this).attr('id'));
+    $(name).removeClass('tool-active');
+  });
+  $('.left').on('mouseenter', function(){
+    link = $(this);
+    name = ('#tool-' + $(this).attr('id'));
+    $(name).addClass('tool-activel');
+  });
+  $('.left').on('mouseleave', function(){
+    link = $(this);
+    name = ('#tool-' + $(this).attr('id'));
+    $(name).removeClass('tool-activel');
+  });
 }
