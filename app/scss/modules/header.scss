@@ -140,6 +140,10 @@
     &--scroll {
       border-color: #4998ff; 
     }
+    &:hover {
+      background-color: white;
+      color: #006EFF;
+    }
     @include megaLarge {
       margin-left: 30px;
     }

@@ -32,7 +32,7 @@ let headerScroll = function() {
     $('.header__logo').css('display', 'none');
     $('.header__logo--scroll').css('display', 'block');
     $('.header__phone').addClass('header__phone--scroll');
-    $('.header__button').addClass('header__button--scroll');
+    $('.button--header').addClass('button--header--scroll');
     if (($('.burger').hasClass('noneScroll') !== true) && ($(window).scrollTop() !== 0)){
 
       $('.burger').addClass('burger--scroll');
@@ -44,7 +44,7 @@ let headerScroll = function() {
       $('.header__logo').css('display', 'block');
       $('.header__logo--scroll').css('display', 'none');
       $('.header__phone').removeClass('header__phone--scroll');
-      $('.header__button').removeClass('header__button--scroll');
+      $('.button--header').removeClass('button--header--scroll');
       $('.burger').removeClass('burger--scroll');
     }
   });
@@ -110,15 +110,24 @@ function modal() {
 
 
     $(".modal").on("click", event => {
-      if ($(event.target).hasClass("modal") || $(event.target).hasClass("modal__close")) {
+      if ($(event.target).hasClass("modal") || $(event.target).hasClass("svg-cross")) {
 
         $(".modal").removeClass("modal--active");
         $(".modal__item--active").removeClass("modal__item--active");
-        console.log('vfg')
 
       }
-    })
+    });
 
+  });
+
+  $('.button--modal').on('click', function(){
+    if ($('#chec').prop('checked') == false){
+      $('.modal-form__consent').addClass('modal-form__consent--red');
+      $('.consent-checkbox').addClass('consent-checkbox--red');
+    }else{
+      $('.modal-form__consent').removeClass('modal-form__consent--red');
+      $('.consent-checkbox').removeClass('consent-checkbox--red');
+    }
   });
 
 }
@@ -128,8 +137,11 @@ function modal() {
 
 function cllick () {
   $('.button').on('click', function(e){
-    $(this).append('<div class = circle></div>')
-
+    if ($(this).hasClass('button--header')){
+      $(this).append('<div class = "circle circle--header"></div>')
+    }else{
+      $(this).append('<div class = circle></div>')
+    }
       var position = $(this).offset();
       var topX = (e.pageX - (position.left+65));
       var leftY = (e.pageY - (position.top+65));
@@ -141,6 +153,7 @@ function cllick () {
 
   $('.button').on('mouseup', function(){
     $('.circle').remove()
+    $('.circle--header').remove()
   });
   
 }

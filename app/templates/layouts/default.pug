@@ -36,11 +36,11 @@ html(lang="ru")
                     form(action="").form.modal-form__form
                         input(type="text", name="name", placeholder="Ваше имя").form__input
                         input(type="text", name="e-mail", placeholder="Ваш e-mail").form__input
-                    .button Отправить
+                    .button.button--modal Отправить
                     .modal-form__consent
                         .consent-checkbox
-                            label.check(for="check")
-                                input(type="checkbox" id="check")
+                            input.chec(type="checkbox" id="chec" name="check")
+                            label.check(for="chec")
                         |Согласие на обработку персональных данных в соответствии с политикой конфиденциальности
 
         script(src='js/scripts.min.js')

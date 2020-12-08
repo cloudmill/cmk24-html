@@ -9,6 +9,7 @@
     overflow-y: auto;
     transition: $ease-main;
     pointer-events: none;
+    z-index: 6;
 
     &--active {
         opacity: 1;
