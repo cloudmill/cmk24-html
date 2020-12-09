@@ -38,7 +38,7 @@
           <div class="inner inner--relative">
             <h1 class="title title--start">Внедрим систему<br>менеджмента качества</h1>
             <h2 class="title title--start-h2">ГОСТ Р ИСО 9001-2015</h2>
-            <div class="text text--start">«Система менеджмента качества на соответствие»</div><a class="button button--mg-t--30 button--start js--modal" href="#call">Узнать подробнее</a>
+            <div class="text text--start">«Система менеджмента качества на соответствие»</div><a class="button button--mg-t--30 button--start js--modal" href="#rus">Узнать подробнее</a>
             <div class="start__bg-img"><img src="./images/start-bg.svg" alt="планета"></div>
           </div>
         </div>
@@ -229,7 +229,7 @@
             <div class="photo"><img class="businessman" src="./images/businessman.png" alt="Бизнессмен"></div>
             <div class="title title--subtitle title--mg-t--35">Игорь Державин</div>
             <div class="text text--toolTip text--mg-t--20">cпециалист по внедрению ИСО</div>
-            <div class="button button--wd--240 button--mg-t--75">Задать вопрос</div>
+            <div class="button button--wd--240 button--mg-t--75 js--modal" href="#question">Задать вопрос</div>
           </div>
         </div>
       </div>
@@ -341,7 +341,7 @@
                 <div class="bg-circle skype"></div>
                 <div class="bg-circle telegram"></div>
               </div>
-              <div class="button button--blue button--mg-t--117 button--wd--240">Запросить звонок</div>
+              <div class="button button--blue button--mg-t--117 button--wd--240 js--modal" href="#call">Запросить звонок</div>
             </div>
           </div>
           <div class="made-in">
@@ -369,6 +369,40 @@
                     <input class="form__input" type="text" name="name" placeholder="Ваше имя">
                     <input class="form__input" type="text" name="e-mail" placeholder="Ваш e-mail">
                   </form>
+                  <div class="button button--modal">Отправить</div>
+                  <div class="modal-form__consent">
+                    <div class="consent-checkbox">
+                      <input class="chec" type="checkbox" id="chec" name="check">
+                      <label class="check" for="chec"></label>
+                    </div>Согласие на обработку персональных данных в соответствии с политикой конфиденциальности
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal__item modal__item--large" id="rus">
+              <button class="modal__close">
+                <div class="modal__close-icon"><i class="svg-icon svg-cross"></i>
+                </div>
+              </button>
+              <div class="modal__content">
+                <div class="modal__section modal__section--blue modal__section--pd-tb--60">
+                  <div class="modal__inner">
+                    <div class="modal__title modal__title--start">ООО «Заснеженная Русь»</div>
+                    <div class="modal__row">
+                      <div class="modal__left-column">Задача</div>
+                      <div class="modal__column modal__column--start">В ходе телефонного разговора выяснилось, что на территорию предприятия приезжал проверка РПН, в ходе которой были выявлены документарные нарушения, в частности отсутствие процедур ХАССП.<br><br>На устранение нарушений, по словам клиента, было отведено 2 месяца.<br><br>В случае неустранения нарушение компании грозил штраф в размере 300 000 руб и приостановление деятельности на срок 2 месяца.<br><br>После согласования всех нюансов и заполнения заявки, было принято решение произвести на данном предприятии комплекс мероприятий по внедрению ГОСТ Р 51705 (ХАССП), который состоит из следующих пунктов.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal__section modal__section--pd-tb--100">
+                  <div class="modal__inner modal__inner--center">
+                    <div class="modal__column modal__column--center">
+                      <div class="modal__title modal__title--photo">Разработкой<br>проекта занимался</div>
+                      <div class="modal__text modal__text--black">специалист по внедрению</div>
+                      <div class="modal__text modal__text--name">Игорь Державин</div>
+                      <div class="modal__img"><img src="./images/businessman.png" alt="Игорь Державин"></div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -379,16 +413,16 @@
               </button>
               <div class="modal__content">
                 <div class="modal-form">
-                  <div class="modal-form__title">Задать вопрос по внедрению СМК</div>
+                  <div class="modal-form__title">Запросить обратный звонок</div>
                   <form class="form modal-form__form" action="">
                     <input class="form__input" type="text" name="name" placeholder="Ваше имя">
-                    <input class="form__input" type="text" name="e-mail" placeholder="Ваш e-mail">
+                    <input class="form__input" type="text" name="call" placeholder="Ваш телефон" id="callphone">
                   </form>
                   <div class="button button--modal">Отправить</div>
                   <div class="modal-form__consent">
                     <div class="consent-checkbox">
-                      <input class="chec" type="checkbox" id="chec" name="check">
-                      <label class="check" for="chec"></label>
+                      <input class="chec" type="checkbox" id="callcheck" name="callcheck">
+                      <label class="check" for="callcheck"></label>
                     </div>Согласие на обработку персональных данных в соответствии с политикой конфиденциальности
                   </div>
                 </div>

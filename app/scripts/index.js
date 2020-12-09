@@ -1,7 +1,7 @@
 import $ from "jquery";
 import App from "./main";
 import Swiper from "swiper";
-import { createPopper } from '@popperjs/core';
+import Inputmask from "inputmask";
 
 $(document).ready(function() {
 
@@ -23,6 +23,8 @@ $(document).ready(function() {
 
   // MODALS
   modal();
+
+  mas ();
 
 });
 
@@ -121,15 +123,20 @@ function modal() {
   });
 
   $('.button--modal').on('click', function(){
-    if ($('#chec').prop('checked') == false){
-      $('.modal-form__consent').addClass('modal-form__consent--red');
-      $('.consent-checkbox').addClass('consent-checkbox--red');
-    }else{
+    if (($('#chec').prop('checked') == true) || ($('#callcheck').prop('checked') == true)){
       $('.modal-form__consent').removeClass('modal-form__consent--red');
       $('.consent-checkbox').removeClass('consent-checkbox--red');
+    }else{
+      $('.modal-form__consent').addClass('modal-form__consent--red');
+      $('.consent-checkbox').addClass('consent-checkbox--red');
     }
   });
 
+}
+
+function mas (){
+  // $("#callphone");
+  Inputmask("+7(999) 999-9999").mask("#callphone");
 }
 
 

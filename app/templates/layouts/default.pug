@@ -15,8 +15,8 @@ html(lang="ru")
             include ../modules/footer
 
         .modal
-            mixin modal__item(id = "test")
-                .modal__item(id = id)
+            mixin modal__item(id = "test", classes)
+                .modal__item(id = id, class = classes ? classes : "")
                     button.modal__close
                         .modal__close-icon
                             +icon("cross", "svg")
@@ -30,17 +30,57 @@ html(lang="ru")
                         input(type="text", name="name", placeholder="Ваше имя").form__input
                         input(type="text", name="e-mail", placeholder="Ваш e-mail").form__input
 
-            +modal__item("call")
-                .modal-form
-                    .modal-form__title Задать вопрос по внедрению СМК
-                    form(action="").form.modal-form__form
-                        input(type="text", name="name", placeholder="Ваше имя").form__input
-                        input(type="text", name="e-mail", placeholder="Ваш e-mail").form__input
                     .button.button--modal Отправить
                     .modal-form__consent
                         .consent-checkbox
                             input.chec(type="checkbox" id="chec" name="check")
                             label.check(for="chec")
+                        |Согласие на обработку персональных данных в соответствии с политикой конфиденциальности
+
+            +modal__item("rus", "modal__item--large")
+                .modal__section.modal__section--blue.modal__section--pd-tb--60
+                    .modal__inner
+                        .modal__title.modal__title--start ООО «Заснеженная Русь»
+                        .modal__row
+                            .modal__left-column Задача
+                            .modal__column.modal__column--start В ходе телефонного разговора выяснилось, что на территорию предприятия приезжал проверка РПН, в ходе которой были выявлены документарные нарушения, в частности отсутствие процедур ХАССП.
+                                br
+                                br
+                                |На устранение нарушений, по словам клиента, было отведено 2 месяца.
+                                br
+                                br
+                                |В случае неустранения нарушение компании грозил штраф в размере 300 000 руб и приостановление деятельности на срок 2 месяца.
+                                br
+                                br
+                                |После согласования всех нюансов и заполнения заявки, было принято решение произвести на данном предприятии комплекс мероприятий по внедрению ГОСТ Р 51705 (ХАССП), который состоит из следующих пунктов.
+                .modal__section.modal__section--pd-tb--100
+                    .modal__inner.modal__inner--center
+                        .modal__column.modal__column--center
+                            .modal__title.modal__title--photo Разработкой
+                                br 
+                                |проекта занимался
+                            .modal__text.modal__text--black специалист по внедрению
+                            .modal__text.modal__text--name Игорь Державин
+                            .modal__img
+                                img(src="./images/businessman.png", alt="Игорь Державин")
+
+
+
+                    
+
+
+
+            +modal__item("call")
+                .modal-form
+                    .modal-form__title Запросить обратный звонок
+                    form(action="").form.modal-form__form
+                        input(type="text", name="name", placeholder="Ваше имя").form__input
+                        input(type="text", name="call", placeholder="Ваш телефон").form__input#callphone
+                    .button.button--modal Отправить
+                    .modal-form__consent
+                        .consent-checkbox
+                            input.chec(type="checkbox" id="callcheck" name="callcheck")
+                            label.check(for="callcheck")
                         |Согласие на обработку персональных данных в соответствии с политикой конфиденциальности
 
         script(src='js/scripts.min.js')
