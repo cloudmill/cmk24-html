@@ -341,9 +341,32 @@
       padding: 25px 0 0 0;
     }
   }
-  img {
-    width: 182px;
-    height: 265px;
-    flex-shrink: 0;
+  .card-img {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &:hover::before {
+      background-image: url("data:image/svg+xml,%3Csvg width='33' height='33' viewBox='0 0 33 33' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M32.1345 30.1791L22.9387 20.9833C24.6829 18.83 25.7328 16.0925 25.7328 13.1121C25.7328 6.20277 20.1116 0.581543 13.2023 0.581543C6.29298 0.581543 0.671814 6.20277 0.671814 13.1121C0.671814 20.0213 6.29304 25.6426 13.2023 25.6426C16.1828 25.6426 18.9203 24.5926 21.0736 22.8485L30.2694 32.0443C30.5271 32.3018 30.9445 32.3018 31.2022 32.0443L32.1346 31.1118C32.3921 30.8542 32.3921 30.4367 32.1345 30.1791ZM13.2023 23.0046C7.7473 23.0046 3.30983 18.5671 3.30983 13.1121C3.30983 7.65703 7.7473 3.21956 13.2023 3.21956C18.6574 3.21956 23.0948 7.65703 23.0948 13.1121C23.0948 18.5671 18.6574 23.0046 13.2023 23.0046Z' fill='white'/%3E%3C/svg%3E");
+      background-color: rgba(128, 182, 255, 0.5);
+    }
+
+    img {
+      width: 182px;
+      height: 265px;
+      flex-shrink: 0;
+    }
   }
+
+  
+    
 }
