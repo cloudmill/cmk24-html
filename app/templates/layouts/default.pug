@@ -28,7 +28,7 @@ html(lang="ru")
                     .modal-form__title Задать вопрос по внедрению СМК
                     form(action="").form.modal-form__form
                         input(type="text", name="name", placeholder="Ваше имя", required).form__input
-                        input(type="text", name="e-mail", placeholder="Ваш e-mail", required).form__input
+                        input(type="text", name="e-mail", placeholder="Ваш e-mail", required).form__input#email
 
                     .button.button--modal Отправить
                     .modal-form__consent
@@ -42,7 +42,8 @@ html(lang="ru")
                     .modal__inner
                         .modal__title.modal__title--start ООО «Заснеженная Русь»
                         .modal__row.modal__row--mg-t--80
-                            .modal__left-column Задача
+                            .modal__left-column 
+                                p.modal__title Задача
                             .modal__column.modal__column--start В ходе телефонного разговора выяснилось, что на территорию предприятия приезжал проверка РПН, в ходе которой были выявлены документарные нарушения, в частности отсутствие процедур ХАССП.
                                 br
                                 br
@@ -59,33 +60,34 @@ html(lang="ru")
                             .modal__title.modal__title--photo Разработкой
                                 br 
                                 |проекта занимался
-                            .modal__text.modal__text--black специалист по внедрению
-                            .modal__text.modal__text--name Игорь Державин
                             .modal__img
                                 img(src="./images/businessman.png", alt="Игорь Державин")
+                            .modal__text.modal__text--black специалист по внедрению
+                            .modal__text.modal__text--name Игорь Державин
                 .modal__section.modal__section--blue.modal__section--pg-t--80
                     .modal__inner
                         .modal__row
-                           .modal__left-column Решение 
-                           .modal__column
-                            p.modal__title Аудит предприятия
-                            ul.modal__list
-                                li В рамках аудита было выявлено отсутствие документированных процедур по производству молока и кисломолочной продукции
-                                li Количество сотрудников предприятия составляет 21 человек
-                                li На предприятии функционирует 3 производственные линии и 4 технологических процесса
-                            p.modal__text.modal__text--mg--50 Разработка документации, согласно технического задания, в который входят необходимые документированные процедуры, приказы, формы и журналы, в составе:
-                            ul.modal__list
-                                li Приказ о составе рабочей группы ХАССП
-                                li Приказ о назначении "внутренних аудиторов
-                                li Области применения ХАССП
-                                li Политика и цели СМБПП
-                                li Описание сырья и продукции
-                                li Информация о производстве
-                                li Анализ опасностей
-                                li Анализ рисков и Критических контрольных точек (ККТ)
-                                li План ХАССП
-                                li Управление несоответствиями
-                                li Валидация и верификация
+                            .modal__left-column
+                                p.modal__title Решение 
+                            .modal__column
+                                p.modal__title Аудит предприятия
+                                ul.modal__list
+                                    li В рамках аудита было выявлено отсутствие документированных процедур по производству молока и кисломолочной продукции
+                                    li Количество сотрудников предприятия составляет 21 человек
+                                    li На предприятии функционирует 3 производственные линии и 4 технологических процесса
+                                p.modal__text.modal__text--mg--50 Разработка документации, согласно технического задания, в который входят необходимые документированные процедуры, приказы, формы и журналы, в составе:
+                                ul.modal__list
+                                    li Приказ о составе рабочей группы ХАССП
+                                    li Приказ о назначении "внутренних аудиторов
+                                    li Области применения ХАССП
+                                    li Политика и цели СМБПП
+                                    li Описание сырья и продукции
+                                    li Информация о производстве
+                                    li Анализ опасностей
+                                    li Анализ рисков и Критических контрольных точек (ККТ)
+                                    li План ХАССП
+                                    li Управление несоответствиями
+                                    li Валидация и верификация
                 .modal__section.modal__section--pd-b--35
                     .modal__inner
                             .modal__row
@@ -121,6 +123,9 @@ html(lang="ru")
 
             +modal__item("call")
                 .modal-form
+                    .modal__thanks
+                        .modal__title.modal__title--black Спасибо за обращение!
+                        .modal__title.modal__title--black Мы свяжемся с вами в течении 15 минут
                     .modal-form__title Запросить обратный звонок
                     form(action="").form.modal-form__form
                         input(type="text", name="name", placeholder="Ваше имя").form__input

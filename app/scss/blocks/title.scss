@@ -33,6 +33,7 @@
   &--footer {
     font-size: 60px;
     line-height: 127.98%;
+    border-bottom: 1px solid #0A0A0A;
     @include large {
       font-size: 42px;
     }
@@ -56,8 +57,8 @@
   }
 
   &--subtitle {
-    font-size: 26px;
-    line-height: 35px;
+    font-size: 24px;
+    line-height: 31px;
     @include large {
       font-size: 23px;
     }

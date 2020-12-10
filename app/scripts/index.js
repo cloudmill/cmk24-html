@@ -24,7 +24,7 @@ $(document).ready(function() {
   // MODALS
   modal();
 
-  mas ();
+  mask ();
 
 });
 
@@ -116,6 +116,7 @@ function modal() {
 
         $(".modal").removeClass("modal--active");
         $(".modal__item--active").removeClass("modal__item--active");
+        $('.modal__thanks').css('display', 'none');
 
       }
     });
@@ -123,19 +124,21 @@ function modal() {
   });
 
   $('.button--modal').on('click', function(){
-    if (($('#chec').prop('checked') == true) || ($('#callcheck').prop('checked') == true)){
+    if (($('#chec').prop('checked') && (( $('#callphone').val().length > 1) || ($('#email').val().length > 5) )) || ($('#callcheck').prop('checked') && (( $('#callphone').val().length > 1) || ($('#email').val().length > 5) ))){
+      $('.modal__thanks').css('display', 'flex');
       $('.modal-form__consent').removeClass('modal-form__consent--red');
       $('.consent-checkbox').removeClass('consent-checkbox--red');
     }else{
       $('.modal-form__consent').addClass('modal-form__consent--red');
       $('.consent-checkbox').addClass('consent-checkbox--red');
     }
-  });
+    console.log($('#callphone').val());
+ });
 
 }
 
-function mas (){
-  // $("#callphone");
+function mask (){
+  
   Inputmask("+7(999) 999-9999").mask("#callphone");
 }
 
