@@ -11,6 +11,7 @@
   color: #4998FF;
   white-space: normal;
   z-index: 2;
+  text-align: left;
 }
 
 .arrow {
@@ -64,7 +65,7 @@
 .tool-active {
   left: calc(100% + 12px);
   transform: translateY(-20%);
-  display: block;
+  display: flex;
   @media (max-width: 1050px) {
     right: calc(100% + 12px);
     left: auto;
@@ -104,4 +105,22 @@
     border-right: none;
   }
 }
+
+
+#tool-one {
+  width: 419px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 0;
+  @media (max-width: 630px) {
+    width: 320px;
+  }
+
+  img {
+    height: 250px;
+    margin-top: 10px;
+  }
+}
+
 

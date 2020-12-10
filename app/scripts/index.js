@@ -26,9 +26,19 @@ $(document).ready(function() {
 
   mask ();
 
+  formWarn ();
+
 });
 
 let headerScroll = function() {
+
+  if ( $(window).scrollTop() > 0 ){
+    $('header').addClass('header--scroll');
+    $('.header__logo').css('display', 'none');
+    $('.header__logo--scroll').css('display', 'block');
+    $('.header__phone').addClass('header__phone--scroll');
+    $('.button--header').addClass('button--header--scroll');
+  }
   $(window).on('scroll', function(){
     $('header').addClass('header--scroll');
     $('.header__logo').css('display', 'none');
@@ -41,7 +51,7 @@ let headerScroll = function() {
 
     }
 
-    if( $(window).scrollTop() == 0 ){
+    if ( $(window).scrollTop() == 0 ){
       $('header').removeClass('header--scroll');
       $('.header__logo').css('display', 'block');
       $('.header__logo--scroll').css('display', 'none');
@@ -132,14 +142,14 @@ function modal() {
       $('.modal-form__consent').addClass('modal-form__consent--red');
       $('.consent-checkbox').addClass('consent-checkbox--red');
     }
-    console.log($('#callphone').val());
+    console.log($('#callphone').val().length);
  });
 
 }
 
 function mask (){
   
-  Inputmask("+7(999) 999-9999").mask("#callphone");
+  Inputmask("+7(9999999999").mask("#callphone");
 }
 
 
@@ -187,6 +197,26 @@ function tooltip () {
       $(name).toggleClass('tool-activel');
     }else{
       $(name).toggleClass('tool-active');
+    }
+    
+  });
+}
+
+
+function formWarn () {
+
+  $('input, textarea').on('blur', function(){
+    console.log('dfd');
+    if ($(this).val().length < 2){
+
+      $(this).addClass('form__input--warn');
+      $(this).siblings('.text-warn').css('display', 'block');
+
+    }else{
+
+      $(this).removeClass('form__input--warn');
+      $(this).siblings('.text-warn').css('display', 'none');
+
     }
     
   });

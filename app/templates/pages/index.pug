@@ -13,8 +13,8 @@ block content
                     br
                     |менеджмента качества
                 h2.title.title--start-h2 ГОСТ Р ИСО 9001-2015
-                .text.text--start «Система менеджмента качества на соответствие»
-                a.button.button--mg-t--30.button--start.js--modal(href="#rus") Узнать подробнее
+                p.text.text--start «Система менеджмента качества на соответствие»
+                a.button.button--mg-t--30.button--start.js--modal(href="#question") Узнать подробнее
                 .start__bg-img
                     img(src="./images/start-bg.svg", alt="планета")
         
@@ -27,11 +27,13 @@ block content
                             .advant__content
                                 .item-icon
                                     +icon("people", "svg")
-                                .text Личное присутствие
+                                p.text Личное присутствие
                                     br
                                     |эксперта-аудитора на предприятии
-                            .link.item-link#one Ваш аудитор
-                                .tooltip#tool-one Выездной диагностический аудит предприятия. Отчет с рекомендациями по устранению несоответствий. Разработка документации под ваше предприятие. Обучение сотрудников отдела качества предприятия СМК. Консультационное сопровождение внедрения СМК на предприятии. Подготовка предприятия к аудит-проверкам
+                            a.link.item-link#one Ваш аудитор
+                                .tooltip#tool-one 
+                                    p.title.title--subtitle Державин Игорь
+                                    img(src="./images/businessman.png", alt="Державин Игорь")
                                 .arrow
                         .advant__item
                             .advant__content
@@ -42,30 +44,24 @@ block content
                                     |РОССТАНДАРТОМ под номером
                                     br
                                     |№ РОСС RU.31763.04ЖОЭ2
-                            .link.item-link.left#two Смотреть в реестре
-                                .tooltip#tool-two Выездной диагностический аудит предприятия. Отчет с рекомендациями по устранению несоответствий. Разработка документации под ваше предприятие. Обучение сотрудников отдела качества предприятия СМК. Консультационное сопровождение внедрения СМК на предприятии. Подготовка предприятия к аудит-проверкам
-                                .arrowl
+                            .link.item-link.left Смотреть в реестре
                     .advant__row
                         .advant__item
                             .advant__content
                                 .item-icon
                                     +icon("docx", "svg")
-                                .text Гарантии и алгоритм работы
+                                p.text Гарантии и алгоритм работы
                                     br
                                     |прописаны в Договоре
-                            .link.item-link#three Типовой договор
-                                .tooltip#tool-three Разработка необходимой документации и полноценное онлайн обучение персонала компании принципам внедрения СМК
-                                .arrow
+                            .link.item-link Типовой договор
                         .advant__item
                             .advant__content
                                 .item-icon
                                     +icon("certif", "svg")
-                                .text Выдаем сертификаты только
+                                p.text Выдаем сертификаты только
                                     br
                                     |от аккредитованных органов
-                            .link.item-link.left#four Образец сертификата
-                                .tooltip#tool-four Аудит, дистанционное внедрение СМК, без выезда эксперта. Обучение отдела качества поддержанию СМК в рабочем состоянии. Сертификаты внутренних аудиторов. Взаимодействие проходит по скайп
-                                .arrowl
+                            .link.item-link.left Образец сертификата
 
         .tariffs
 
@@ -94,7 +90,7 @@ block content
                                 h3.tariff__info-title Стоимость внедрения
                                 p.tariff__info-text 2-6 месяца
 
-                        a.tariff__button.button.button--blue( href="#modal", data-modal="tariff-1") Мне подходит 
+                        a.tariff__button.button.button--blue.js--modal(href="#call") Мне подходит 
                     
                     .tariff
                     
@@ -117,7 +113,7 @@ block content
                                 h3.tariff__info-title Стоимость внедрения
                                 p.tariff__info-text 1,5-3 месяца
 
-                        a.tariff__button.button.button--blue( href="#modal", data-modal="tariff-1") Мне подходит 
+                        a.tariff__button.button.button--blue.js--modal(href="#call") Мне подходит 
                         
                     .tariff.tariff--highlight
                     
@@ -140,7 +136,7 @@ block content
                                 h3.tariff__info-title Стоимость внедрения
                                 p.tariff__info-text 1-2 месяца
 
-                        a.button.tariff__button( href="#modal", data-modal="tariff-1") Мне подходит 
+                        a.button.tariff__button.js--modal(href="#call") Мне подходит 
 
                     .tariff
                     
@@ -163,15 +159,15 @@ block content
                                 h3.tariff__info-title Стоимость внедрения
                                 p.tariff__info-text 1-1,5 месяц
 
-                        a.tariff__button.button.button--blue( href="#modal", data-modal="tariff-1") Мне подходит 
+                        a.tariff__button.button.button--blue.js--modal(href="#call") Мне подходит 
 
 
         .sale
             .inner.inner--small.inner--relative
                 .sale__conteiner
                     .sale__box
-                        .title.title--white Скидка 30%
-                        .text.text--section.text--mg-t--20 Ответьте на несколько вопросов 
+                        p.title.title--white Скидка 30%
+                        p.text.text--section.text--mg-t--20 Ответьте на несколько вопросов 
                             br
                             |и получите скидку!
                         .button.button--mg-t--100.button--wd--240 Получить скидку
@@ -207,7 +203,7 @@ block content
                         .link.link--mg-t--70 Скачать образец
         .big-photo
             .inner.inner--small.inner--relative
-                .title Задайте вопрос 
+                p.title Задайте вопрос 
                     br 
                     |по внедрению ИСО 
                     br
@@ -215,57 +211,57 @@ block content
                 .photo
                     img.businessman(src="./images/businessman.png", alt="Бизнессмен")
                 .title.title--subtitle.title--mg-t--35 Игорь Державин
-                .text.text--toolTip.text--mg-t--20 cпециалист по внедрению ИСО
+                p.text.text--toolTip.text--mg-t--20 cпециалист по внедрению ИСО
                 .button.button--wd--240.button--mg-t--75.js--modal(href="#question") Задать вопрос
     .slider-block.case
         .inner.inner--small
             .block-row
-                .title.title--white Наши кейсы
+                p.title.title--white Наши кейсы
                 .slider-buttons
                     .button.button--slider.button--left
                     .button.button--slider.button--right
             .swiper-container.slider
                 .swiper-wrapper
                     .swiper-slide.card
-                        .text.text--toolTip Производитель молочной продукции
-                        .title.title--subtitle.title--mg-t--20 «ООО «Заснеженная Русь»»
-                        .text.text--toolTip.text--mg-t--60 Задача
-                        .title.title--subtitle-small.title--mg-t--20 Провести мероприятие по внедрению ГОСТ Р 51705 (ХАССП)
+                        p.text.text--toolTip Производитель молочной продукции
+                        p.title.title--subtitle.title--mg-t--20 «ООО «Заснеженная Русь»»
+                        p.text.text--toolTip.text--mg-t--60 Задача
+                        p.title.title--subtitle-small.title--mg-t--20 Провести мероприятие по внедрению ГОСТ Р 51705 (ХАССП)
                         .button.button--red.button--mg-t--100.js--modal(href="#rus") Кейс полностью
                     .swiper-slide.card
-                        .text.text--toolTip Федеральная авиакомпания
-                        .title.title--subtitle.title--mg-t--20 «АО Плярные авиалинии»
-                        .text.text--toolTip.text--mg-t--60 Задача
-                        .title.title--subtitle-small.title--mg-t--20 Произвести на данном предприятии  выездной  диагностический Аудит СМК
+                        p.text.text--toolTip Федеральная авиакомпания
+                        p.title.title--subtitle.title--mg-t--20 «АО Плярные авиалинии»
+                        p.text.text--toolTip.text--mg-t--60 Задача
+                        p.title.title--subtitle-small.title--mg-t--20 Произвести на данном предприятии  выездной  диагностический Аудит СМК
                         .button.button--red.button--mg-t--100 Кейс полностью
                     .swiper-slide.card
-                        .text.text--toolTip Производитель водных дисперсий полимеров и клеев
-                        .title.title--subtitle.title--mg-t--20 НОРД –СИНТЕЗ
-                        .text.text--toolTip.text--mg-t--60 Задача
-                        .title.title--subtitle-small.title--mg-t--20 Обновить устаревшую СМК, провести обучение сотрудников
+                        p.text.text--toolTip Производитель водных дисперсий полимеров и клеев
+                        p.title.title--subtitle.title--mg-t--20 НОРД –СИНТЕЗ
+                        p.text.text--toolTip.text--mg-t--60 Задача
+                        p.title.title--subtitle-small.title--mg-t--20 Обновить устаревшую СМК, провести обучение сотрудников
                         .button.button--red.button--mg-t--100 Кейс полностью
                     .swiper-slide.card
-                        .text.text--toolTip Производитель молочной продукции
-                        .title.title--subtitle.title--mg-t--20 «ООО «Заснеженная Русь»»
-                        .text.text--toolTip.text--mg-t--60 Задача
-                        .title.title--subtitle-small.title--mg-t--20 Провести мероприятие по внедрению ГОСТ Р 51705 (ХАССП)
+                        p.text.text--toolTip Производитель молочной продукции
+                        p.title.title--subtitle.title--mg-t--20 «ООО «Заснеженная Русь»»
+                        p.text.text--toolTip.text--mg-t--60 Задача
+                        p.title.title--subtitle-small.title--mg-t--20 Провести мероприятие по внедрению ГОСТ Р 51705 (ХАССП)
                         .button.button--red.button--mg-t--100.js--modal(href="#rus") Кейс полностью
                     .swiper-slide.card
-                        .text.text--toolTip Федеральная авиакомпания
-                        .title.title--subtitle.title--mg-t--20 «АО Плярные авиалинии»
-                        .text.text--toolTip.text--mg-t--60 Задача
-                        .title.title--subtitle-small.title--mg-t--20 Произвести на данном предприятии  выездной  диагностический Аудит СМК
+                        p.text.text--toolTip Федеральная авиакомпания
+                        p.title.title--subtitle.title--mg-t--20 «АО Плярные авиалинии»
+                        p.text.text--toolTip.text--mg-t--60 Задача
+                        p.title.title--subtitle-small.title--mg-t--20 Произвести на данном предприятии  выездной  диагностический Аудит СМК
                         .button.button--red.button--mg-t--100 Кейс полностью
                     .swiper-slide.card
-                        .text.text--toolTip Производитель водных дисперсий полимеров и клеев
-                        .title.title--subtitle.title--mg-t--20 НОРД –СИНТЕЗ
-                        .text.text--toolTip.text--mg-t--60 Задача
-                        .title.title--subtitle-small.title--mg-t--20 Обновить устаревшую СМК, провести обучение сотрудников
+                        p.text.text--toolTip Производитель водных дисперсий полимеров и клеев
+                        p.title.title--subtitle.title--mg-t--20 НОРД –СИНТЕЗ
+                        p.text.text--toolTip.text--mg-t--60 Задача
+                        p.title.title--subtitle-small.title--mg-t--20 Обновить устаревшую СМК, провести обучение сотрудников
                         .button.button--red.button--mg-t--100 Кейс полностью
     .slider-block.docs
         .inner.inner--small
             .block-row
-                .title Отзывы
+                p.title Отзывы
                 .slider-buttons
                     .button.button--slider.button--left.button--border--blue
                     .button.button--slider.button--right.button--border--blue
@@ -275,25 +271,25 @@ block content
                         .card-img
                             img(src="./images/screen.png", alt="благодарность")
                         .conteiner
-                            .text.text--italic Благодарим компанию "СМК24" в частности Ведущего специалиста Игорю Державину, за высокое качество и оперативность оказанных услуг по сертификации систем менеджмента. Главным достоинством Ваших сотрудников является умение быстро, квалифицированно и добросовестно выполнять поставленные задачи, также обязанность и аккуратность, проявленные в процессе работы.
-                            .text.text--start.text--mg-t--20.text--black Заместитель директора ООО "Красноярская Геоархеология" А.Ю. Дубатов
+                            p.text.text--italic Благодарим компанию "СМК24" в частности Ведущего специалиста Игорю Державину, за высокое качество и оперативность оказанных услуг по сертификации систем менеджмента. Главным достоинством Ваших сотрудников является умение быстро, квалифицированно и добросовестно выполнять поставленные задачи, также обязанность и аккуратность, проявленные в процессе работы.
+                            p.text.text--start.text--mg-t--20.text--black Заместитель директора ООО "Красноярская Геоархеология" А.Ю. Дубатов
                     .swiper-slide.card
                         .card-img
                             img(src="./images/screen.png", alt="благодарность")
                         .conteiner
-                            .text.text--italic Благодарим компанию "СМК24" в частности Ведущего специалиста Игорю Державину, за высокое качество и оперативность оказанных услуг по сертификации систем менеджмента. Главным достоинством Ваших сотрудников является умение быстро, квалифицированно и добросовестно выполнять поставленные задачи, также обязанность и аккуратность, проявленные в процессе работы.
-                            .text.text--start.text--mg-t--20.text--black Заместитель директора ООО "Красноярская Геоархеология" А.Ю. Дубатов
+                            p.text.text--italic Благодарим компанию "СМК24" в частности Ведущего специалиста Игорю Державину, за высокое качество и оперативность оказанных услуг по сертификации систем менеджмента. Главным достоинством Ваших сотрудников является умение быстро, квалифицированно и добросовестно выполнять поставленные задачи, также обязанность и аккуратность, проявленные в процессе работы.
+                            p.text.text--start.text--mg-t--20.text--black Заместитель директора ООО "Красноярская Геоархеология" А.Ю. Дубатов
                     .swiper-slide.card
                         .card-img
                             img(src="./images/screen.png", alt="благодарность")
                         .conteiner
-                            .text.text--italic Благодарим компанию "СМК24" в частности Ведущего специалиста Игорю Державину, за высокое качество и оперативность оказанных услуг по сертификации систем менеджмента. Главным достоинством Ваших сотрудников является умение быстро, квалифицированно и добросовестно выполнять поставленные задачи, также обязанность и аккуратность, проявленные в процессе работы.
-                            .text.text--start.text--mg-t--20.text--black Заместитель директора ООО "Красноярская Геоархеология" А.Ю. Дубатов
+                            p.text.text--italic Благодарим компанию "СМК24" в частности Ведущего специалиста Игорю Державину, за высокое качество и оперативность оказанных услуг по сертификации систем менеджмента. Главным достоинством Ваших сотрудников является умение быстро, квалифицированно и добросовестно выполнять поставленные задачи, также обязанность и аккуратность, проявленные в процессе работы.
+                            p.text.text--start.text--mg-t--20.text--black Заместитель директора ООО "Красноярская Геоархеология" А.Ю. Дубатов
                     .swiper-slide.card
                         .card-img
                             img(src="./images/screen.png", alt="благодарность")
                         .conteiner
-                            .text.text--italic Благодарим компанию "СМК24" в частности Ведущего специалиста Игорю Державину, за высокое качество и оперативность оказанных услуг по сертификации систем менеджмента. Главным достоинством Ваших сотрудников является умение быстро, квалифицированно и добросовестно выполнять поставленные задачи, также обязанность и аккуратность, проявленные в процессе работы.
-                            .text.text--start.text--mg-t--20.text--black Заместитель директора ООО "Красноярская Геоархеология" А.Ю. Дубатов
+                            p.text.text--italic Благодарим компанию "СМК24" в частности Ведущего специалиста Игорю Державину, за высокое качество и оперативность оказанных услуг по сертификации систем менеджмента. Главным достоинством Ваших сотрудников является умение быстро, квалифицированно и добросовестно выполнять поставленные задачи, также обязанность и аккуратность, проявленные в процессе работы.
+                            p.text.text--start.text--mg-t--20.text--black Заместитель директора ООО "Красноярская Геоархеология" А.Ю. Дубатов
                 
   
