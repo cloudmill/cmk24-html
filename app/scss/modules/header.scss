@@ -18,7 +18,7 @@
   &--burger {
     background: #5BA2FF;
     color: white;
-    .header__button {
+    .button--header {
       border-color: white;
     }
     .burger {
@@ -68,6 +68,7 @@
       margin-left: 20px;
     }
     a {
+      position: relative;
       margin-right: 41px;
       &:hover {
         color: #daeaff;
@@ -84,6 +85,18 @@
     }
     & a:last-child {
       margin-right: 0;
+    }
+
+    .nav-active {
+      &::before {
+        content: '';
+        position: absolute;
+        height: 2px;
+        background-color: #4998FF;
+        left: 0;
+        right: 0;
+        top: 57px;
+      }
     }
   }
   &__phone {
