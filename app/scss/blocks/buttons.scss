@@ -43,8 +43,8 @@
       color: #4998FF;
     }
     &:hover {
-      background: white;
-      color: #006EFF;
+      background: #006EFF;
+      color: white;
     }
     @include megaLarge {
       margin-left: 30px;

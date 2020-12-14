@@ -9,6 +9,11 @@
   display: inline-block;
   white-space: nowrap;
   cursor: pointer;
+  transition: all 0,2s;
+
+  &:hover {
+    border-bottom: none;
+  }
   &--icon {
     margin-right: 30px;
     &::before {
@@ -33,17 +38,17 @@
     font-size: 12px;
     line-height: 15px;
     color: #63A6FF;
-    border-bottom: none;
+    border-bottom: 0.5px dashed #9DC7FF;
 
-    &::before {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        content: "";
-        display: block;
-        border: 0.5px dashed #9DC7FF;
-    }
+    // &::before {
+    //     position: absolute;
+    //     bottom: 0;
+    //     left: 0;
+    //     right: 0;
+    //     content: "";
+    //     display: block;
+    //     border: 0.5px dashed #9DC7FF;
+    // }
 
     
     &--white {

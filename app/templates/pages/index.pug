@@ -7,7 +7,7 @@ block content
 
     .content
 
-        .start
+        .start.section#start
             .inner.inner--relative
                 h1.title.title--start Внедрим систему
                     br
@@ -87,7 +87,7 @@ block content
                                 p.tariff__info-text от 78 000 ₽
                                 
                             li.tariff__info-item
-                                h3.tariff__info-title Стоимость внедрения
+                                h3.tariff__info-title Срок
                                 p.tariff__info-text 2-6 месяца
 
                         a.tariff__button.button.button--blue.js--modal(href="#call") Мне подходит 
@@ -110,7 +110,7 @@ block content
                                 p.tariff__info-text от 47 000 ₽
                                 
                             li.tariff__info-item
-                                h3.tariff__info-title Стоимость внедрения
+                                h3.tariff__info-title Срок
                                 p.tariff__info-text 1,5-3 месяца
 
                         a.tariff__button.button.button--blue.js--modal(href="#call") Мне подходит 
@@ -133,7 +133,7 @@ block content
                                 p.tariff__info-text от 32 000 ₽
                                 
                             li.tariff__info-item
-                                h3.tariff__info-title Стоимость внедрения
+                                h3.tariff__info-title Срок
                                 p.tariff__info-text 1-2 месяца
 
                         a.button.tariff__button.js--modal(href="#call") Мне подходит 
@@ -156,7 +156,7 @@ block content
                                 p.tariff__info-text от 35 000 ₽
                                 
                             li.tariff__info-item
-                                h3.tariff__info-title Стоимость внедрения
+                                h3.tariff__info-title Срок
                                 p.tariff__info-text 1-1,5 месяц
 
                         a.tariff__button.button.button--blue.js--modal(href="#call") Мне подходит 
@@ -233,13 +233,13 @@ block content
                         p.title.title--subtitle.title--mg-t--20 «АО Плярные авиалинии»
                         p.text.text--toolTip.text--mg-t--60 Задача
                         p.title.title--subtitle-small.title--mg-t--20 Произвести на данном предприятии  выездной  диагностический Аудит СМК
-                        .button.button--red.button--mg-t--100 Кейс полностью
+                        .button.button--red.button--mg-t--100.js--modal(href="#airlines") Кейс полностью
                     .swiper-slide.card
                         p.text.text--toolTip Производитель водных дисперсий полимеров и клеев
                         p.title.title--subtitle.title--mg-t--20 НОРД –СИНТЕЗ
                         p.text.text--toolTip.text--mg-t--60 Задача
                         p.title.title--subtitle-small.title--mg-t--20 Обновить устаревшую СМК, провести обучение сотрудников
-                        .button.button--red.button--mg-t--100 Кейс полностью
+                        .button.button--red.button--mg-t--100.js--modal(href="#north") Кейс полностью
                     .swiper-slide.card
                         p.text.text--toolTip Производитель молочной продукции
                         p.title.title--subtitle.title--mg-t--20 «ООО «Заснеженная Русь»»
@@ -251,13 +251,13 @@ block content
                         p.title.title--subtitle.title--mg-t--20 «АО Плярные авиалинии»
                         p.text.text--toolTip.text--mg-t--60 Задача
                         p.title.title--subtitle-small.title--mg-t--20 Произвести на данном предприятии  выездной  диагностический Аудит СМК
-                        .button.button--red.button--mg-t--100 Кейс полностью
+                        .button.button--red.button--mg-t--100(href="#airlines") Кейс полностью
                     .swiper-slide.card
                         p.text.text--toolTip Производитель водных дисперсий полимеров и клеев
                         p.title.title--subtitle.title--mg-t--20 НОРД –СИНТЕЗ
                         p.text.text--toolTip.text--mg-t--60 Задача
                         p.title.title--subtitle-small.title--mg-t--20 Обновить устаревшую СМК, провести обучение сотрудников
-                        .button.button--red.button--mg-t--100 Кейс полностью
+                        .button.button--red.button--mg-t--100.js--modal.js--modal(href="#north") Кейс полностью
     .slider-block.docs
         .inner.inner--small
             .block-row
@@ -268,25 +268,25 @@ block content
             .swiper-container.slider
                 .swiper-wrapper
                     .swiper-slide.card
-                        .card-img
+                        .card-img.js--modal(href="#review")
                             img(src="./images/screen.png", alt="благодарность")
                         .conteiner
                             p.text.text--italic Благодарим компанию "СМК24" в частности Ведущего специалиста Игорю Державину, за высокое качество и оперативность оказанных услуг по сертификации систем менеджмента. Главным достоинством Ваших сотрудников является умение быстро, квалифицированно и добросовестно выполнять поставленные задачи, также обязанность и аккуратность, проявленные в процессе работы.
                             p.text.text--start.text--mg-t--20.text--black Заместитель директора ООО "Красноярская Геоархеология" А.Ю. Дубатов
                     .swiper-slide.card
-                        .card-img
+                        .card-img.js--modal(href="#review")
                             img(src="./images/screen.png", alt="благодарность")
                         .conteiner
                             p.text.text--italic Благодарим компанию "СМК24" в частности Ведущего специалиста Игорю Державину, за высокое качество и оперативность оказанных услуг по сертификации систем менеджмента. Главным достоинством Ваших сотрудников является умение быстро, квалифицированно и добросовестно выполнять поставленные задачи, также обязанность и аккуратность, проявленные в процессе работы.
                             p.text.text--start.text--mg-t--20.text--black Заместитель директора ООО "Красноярская Геоархеология" А.Ю. Дубатов
                     .swiper-slide.card
-                        .card-img
+                        .card-img.js--modal(href="#review")
                             img(src="./images/screen.png", alt="благодарность")
                         .conteiner
                             p.text.text--italic Благодарим компанию "СМК24" в частности Ведущего специалиста Игорю Державину, за высокое качество и оперативность оказанных услуг по сертификации систем менеджмента. Главным достоинством Ваших сотрудников является умение быстро, квалифицированно и добросовестно выполнять поставленные задачи, также обязанность и аккуратность, проявленные в процессе работы.
                             p.text.text--start.text--mg-t--20.text--black Заместитель директора ООО "Красноярская Геоархеология" А.Ю. Дубатов
                     .swiper-slide.card
-                        .card-img
+                        .card-img.js--modal(href="#review")
                             img(src="./images/screen.png", alt="благодарность")
                         .conteiner
                             p.text.text--italic Благодарим компанию "СМК24" в частности Ведущего специалиста Игорю Державину, за высокое качество и оперативность оказанных услуг по сертификации систем менеджмента. Главным достоинством Ваших сотрудников является умение быстро, квалифицированно и добросовестно выполнять поставленные задачи, также обязанность и аккуратность, проявленные в процессе работы.

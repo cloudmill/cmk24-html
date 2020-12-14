@@ -97,14 +97,12 @@ function burger() {
     $('.burger').toggleClass('burger--active');
     $('.burger-menu').toggleClass('burger-menu--active').css('height', height);
     $('header').toggleClass('header--burger');
-    console.log(counter);
     if ( ((counter % 2) == 1) && (($('.burger').hasClass('burger--scroll') || ($(window).scrollTop() == 0)))){
       $('.burger').removeClass('burger--scroll');
       $('.burger').addClass('noneScroll');
     }else{
       $('.burger').removeClass('noneScroll');
       if ( $(window).scrollTop() !== 0 ){
-        console.log('dijfi')
         $('.burger').addClass('burger--scroll');
       }
       
@@ -130,7 +128,7 @@ function modal() {
 
 
     $(".modal").on("click", event => {
-      if ($(event.target).hasClass("modal") || $(event.target).hasClass("svg-cross")) {
+      if ($(event.target).hasClass("modal") || $(event.target).hasClass("svg-cross") || $(event.target).hasClass("modal__close")) {
 
         $(".modal").removeClass("modal--active");
         $(".modal__item--active").removeClass("modal__item--active");
@@ -150,14 +148,13 @@ function modal() {
       $('.modal-form__consent').addClass('modal-form__consent--red');
       $('.consent-checkbox').addClass('consent-checkbox--red');
     }
-    console.log($('#callphone').val().length);
  });
 
 }
 
 function mask (){
   
-  Inputmask("+7(9999999999").mask("#callphone");
+  Inputmask({ mask: "+7(9[999999999]", "placeholder": "" , greedy: false }).mask("#callphone");
 }
 
 
@@ -165,11 +162,9 @@ function mask (){
 
 function cllick () {
   $('.button').on('click', function(e){
-    if ($(this).hasClass('button--header')){
-      $(this).append('<div class = "circle circle--header"></div>')
-    }else{
+    
       $(this).append('<div class = circle></div>')
-    }
+    
       var position = $(this).offset();
       var topX = (e.pageX - (position.left+65));
       var leftY = (e.pageY - (position.top+65));
@@ -180,8 +175,8 @@ function cllick () {
   });
 
   $('.button').on('mouseup', function(){
-    $('.circle').remove()
-    $('.circle--header').remove()
+    $('.circle').remove();
+
   });
   
 }
@@ -208,26 +203,48 @@ function tooltip () {
     }
     
   });
+
+  $(window).on('click', function(event){
+
+    if (!$(name).is(event.target) && !$('.link').is(event.target) ){
+
+      $(name).removeClass('tool-active');
+      $('.arrow').removeClass('arrow-block');
+      $('.arrowl').removeClass('arrow-block');
+      $(name).removeClass('tool-activel');
+
+    }
+
+  });
 }
 
 
 function formWarn () {
 
-  $('input, textarea').on('blur', function(){
-    console.log('dfd');
-    if ($(this).val().length < 2){
-
-      $(this).addClass('form__input--warn');
-      $(this).siblings('.text-warn').css('display', 'block');
-
-    }else{
-
-      $(this).removeClass('form__input--warn');
-      $(this).siblings('.text-warn').css('display', 'none');
-
-    }
-    
+  $('.button--modal').on('click', function(){
+      let mod;
+      mod = $(this).parent();
+      mod.find('input').each(function(){
+        if ($(this).val() < 2) {
+          $(this).addClass('form__input--warn');
+          $(this).siblings('.text-warn').css('display', 'block');
+        }else{
+          $(this).removeClass('form__input--warn');
+          $(this).siblings('.text-warn').css('display', 'none');
+        }
+      });
+      
+      
   });
+
+  $(window).on('click', function(event){
+
+    if ( !$('.button--modal').is(event.target) ){
+          $('input').removeClass('form__input--warn');
+          $('input').siblings('.text-warn').css('display', 'none');
+    }
+  });
+
 }
 
 
@@ -237,7 +254,7 @@ function anchor () {
 
     var $sections = $('.section');
     $sections.each(function(i,el){
-          var top  = $(el).offset().top - 400;
+          var top  = $(el).offset().top - 600;
           var bottom = top + $(el).height();
           var scroll = $(window).scrollTop();
           var id = $(el).attr('id');

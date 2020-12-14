@@ -3,7 +3,7 @@ footer.footer
     .contacts.section#contacts
       .item
         .text.text--section-small Единая горячая линия
-        .title.title--footer 8 800 5555-087
+        a.title.title--footer(href="tel:8 800 5555-087") 8 800 5555-087
         .text.text--section-small.text--mg-t--33 Понедельник — Пятница
         .title.title--subtitle с 9:00 до 21:00
         .text.text--section-small.text--mg-t--33 Офис
@@ -11,16 +11,15 @@ footer.footer
       .item
         .text.text--section-small Написать в мессенджер
         .contacts__row
-          .bg-circle.masage
-          .bg-circle.wApp
-          .bg-circle.skype
-          .bg-circle.telegram
+          a(href="https://wa.me/+79522833939").bg-circle.wApp
+          a(href="").bg-circle.skype
+          a(href="tg://resolve?domain=+79522833939").bg-circle.telegram
         .button.button--blue.button--mg-t--117.button--wd--240.js--modal(href="#call") Запросить звонок
   .inner.inner--small
     .made-in  
-      .made-in__item Сделано в
-        .link CloudMill
+      .made-in__item Сделано в   
+        a(href="https://www.cloudmill.ru/").link CloudMill
       .made-in__item «СМK24» 2020 
       .made-in__item 
-        .link Политика конфендециальности
+        a(href="#").link Политика конфендециальности
         

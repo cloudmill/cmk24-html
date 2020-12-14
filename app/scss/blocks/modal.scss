@@ -5,7 +5,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(black, 0.44);
+    background-color: rgba(black, 0.8);
     overflow-y: auto;
     transition: $ease-main;
     pointer-events: none;
@@ -38,6 +38,11 @@
         $width: 550px;
         padding: 120px $padding; // test
         max-width: $width + $padding * 2;
+
+        &--medium {
+            max-width: 600px;
+            padding: 0;
+        }
         
         &--large {
             $width: 1100px;
@@ -47,6 +52,10 @@
         &--active {
             display: block;
         }
+    }
+
+    &-img {
+        width: 100%;
     }
 
 
@@ -89,6 +98,7 @@
 
         &--pd-tb--60 {
             padding: 60px 0 125px;
+            border-radius: 4px 4px 0 0;
 
             @media (max-width: 650px) {
                 padding: 30px 0 70px;
@@ -120,6 +130,7 @@
         }
         &--pd-b--60 {
             padding-bottom: 60px;
+            border-radius: 0 0 4px 4px;
         }
     }
 
@@ -140,7 +151,7 @@
     &__row {
         display: flex;
 
-        @media (max-width: 550px) {
+        @media (max-width: 600px) {
             display: block;
         }
 
