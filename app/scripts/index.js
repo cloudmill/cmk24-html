@@ -153,8 +153,19 @@ function modal() {
 }
 
 function mask (){
+
+  Inputmask({ 
+    mask: "+7(999) [999-99-99]",
+    greedy: false,
+    autoUnmask: true,
+    clearIncomplete: true,
+    showMaskOnHover: false,
+    autoUnmask: true,
+    
   
-  Inputmask({ mask: "+7(9[999999999]", "placeholder": "" , greedy: false }).mask("#callphone");
+  
+  }).mask("#callphone");
+  
 }
 
 
@@ -224,7 +235,7 @@ function formWarn () {
   $('.button--modal').on('click', function(){
       let mod;
       mod = $(this).parent();
-      mod.find('input').each(function(){
+      mod.find('.form__input').each(function(){
         if ($(this).val() < 2) {
           $(this).addClass('form__input--warn');
           $(this).siblings('.text-warn').css('display', 'block');
@@ -240,8 +251,8 @@ function formWarn () {
   $(window).on('click', function(event){
 
     if ( !$('.button--modal').is(event.target) ){
-          $('input').removeClass('form__input--warn');
-          $('input').siblings('.text-warn').css('display', 'none');
+          $('.form__input').removeClass('form__input--warn');
+          $('.form__input').siblings('.text-warn').css('display', 'none');
     }
   });
 
