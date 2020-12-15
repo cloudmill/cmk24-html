@@ -298,16 +298,15 @@ function anchor () {
 function formId() {
 
   var data;
+  var modal;
   $('.button').on('click', function(){
     if ( $(this).is('[data-form-id]') ){
       data = $(this).attr('data-form-id');
+      modal = $(this).attr('href')
     }
-    console.log(data);
+
+    $(modal).find('[name="form-id"]').val(data);
+    console.log(modal);
   });
 
-  $('.button--modal').on('click', function(){
-    let parent = $(this).parent();
-    parent.find('[name="form-id"]').val(data);
-    console.log(data);
-  });
 }
