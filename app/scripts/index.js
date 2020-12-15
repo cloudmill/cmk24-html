@@ -155,7 +155,7 @@ function modal() {
 function mask (){
 
   Inputmask({ 
-    mask: "+7(999) [999-99-99]",
+    mask: "+7(999)[ 999-99-99]",
     greedy: false,
     autoUnmask: true,
     clearIncomplete: true,
