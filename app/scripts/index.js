@@ -29,6 +29,8 @@ $(document).ready(function() {
 
   formWarn ();
 
+  formId();
+
 });
 
 let headerScroll = function() {
@@ -45,7 +47,7 @@ let headerScroll = function() {
     $('.header__logo').css('display', 'none');
     $('.header__logo--scroll').css('display', 'block');
     $('.header__phone').addClass('header__phone--scroll');
-    $('.button--header').addClass('button--header--scroll');
+    $('.button--header').addClass('button--blue button--blue--header-size');
     if (($('.burger').hasClass('noneScroll') !== true) && ($(window).scrollTop() !== 0)){
 
       $('.burger').addClass('burger--scroll');
@@ -57,7 +59,7 @@ let headerScroll = function() {
       $('.header__logo').css('display', 'block');
       $('.header__logo--scroll').css('display', 'none');
       $('.header__phone').removeClass('header__phone--scroll');
-      $('.button--header').removeClass('button--header--scroll');
+      $('.button--header').removeClass('button--blue button--blue--header-size');
       $('.burger').removeClass('burger--scroll');
     }
   });
@@ -233,8 +235,7 @@ function tooltip () {
 function formWarn () {
 
   $('.button--modal').on('click', function(){
-      let mod;
-      mod = $(this).parent();
+      let mod = $(this).parent();
       mod.find('.form__input').each(function(){
         if ($(this).val() < 2) {
           $(this).addClass('form__input--warn');
@@ -290,7 +291,23 @@ function anchor () {
      
     
     $('body,html').animate({scrollTop: top}, 400);
-});
+  });
+}
 
 
+function formId() {
+
+  var data;
+  $('.button').on('click', function(){
+    if ( $(this).is('[data-form-id]') ){
+      data = $(this).attr('data-form-id');
+    }
+    console.log(data);
+  });
+
+  $('.button--modal').on('click', function(){
+    let parent = $(this).parent();
+    parent.find('[name="form-id"]').val(data);
+    console.log(data);
+  });
 }

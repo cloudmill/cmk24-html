@@ -119,4 +119,11 @@
         top: 8px;
         display: none;
     }
+
+    .ghost-input {
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
 }
