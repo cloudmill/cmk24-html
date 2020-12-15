@@ -73,7 +73,7 @@
   }
   @media (max-width: 630px) {
     left: -106px;
-    top: 180%;
+    top: 150%;
     transform: translateY(0);
   }
 }
@@ -94,7 +94,7 @@
 .tariff-tool {
   @include extraLarge {
     left: -25px;
-    top: 180%;
+    top: 150%;
     transform: translateY(0);
   }
 }
@@ -109,18 +109,26 @@
 
 
 #tool-one {
-  width: 419px;
+  width: 625px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 0;
+
+  @media (max-width: 1200px) {
+    width: 560px;
+  }
+
+  @media (max-width: 725px) {
+    width: 465px;
+    padding: 10px;
+  }
+
   @media (max-width: 630px) {
     width: 320px;
   }
 
   img {
-    height: 250px;
-    margin-top: 10px;
+    width: 100%;
   }
 }
 

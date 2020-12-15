@@ -42,7 +42,29 @@ html(lang="ru")
                         .consent-checkbox
                             input.chec(type="checkbox" id="chec" name="check")
                             label.check(for="chec")
-                        |Согласие на обработку персональных данных в соответствии с политикой конфиденциальности
+                        a(href="/docs/ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ.pdf", target="_blank")|Согласие на обработку персональных данных в соответствии с политикой конфиденциальности
+
+
+            +modal__item("call")
+                .modal-form
+                    .modal__thanks
+                        .modal__title.modal__title--black Спасибо за обращение!
+                        .modal__title.modal__title--black Мы свяжемся с вами в течении 15 минут
+                    .modal-form__title Запросить обратный звонок
+                    form(action="").form.modal-form__form
+                        .form-warn
+                            input(type="text", name="name", placeholder="Ваше имя").form__input#callname
+                            span.text-warn Заполните поле
+                        .form-warn
+                            input(type="text", name="call", prefix="12", placeholder="+7(").form__input#callphone
+                            span.text-warn Заполните поле
+                    .button.button--modal Отправить
+                    .modal-form__consent
+                        .consent-checkbox
+                            input.chec(type="checkbox" id="callcheck" name="callcheck")
+                            label.check(for="callcheck")
+                        a(href="/docs/ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ.pdf", target="_blank")|Согласие на обработку персональных данных в соответствии с политикой конфиденциальности
+
 
             +modal__item("rus", "modal__item--large")
                 .modal__section.modal__section--blue.modal__section--pd-tb--60
@@ -124,29 +146,6 @@ html(lang="ru")
                                     p.modal__text.modal__text--black После внедрения на предприятии всех процедур, РПН в ходе повторной проверки постановил, полное соответствие компании законодательным требованиям.
 
 
-                    
-
-
-
-            +modal__item("call")
-                .modal-form
-                    .modal__thanks
-                        .modal__title.modal__title--black Спасибо за обращение!
-                        .modal__title.modal__title--black Мы свяжемся с вами в течении 15 минут
-                    .modal-form__title Запросить обратный звонок
-                    form(action="").form.modal-form__form
-                        .form-warn
-                            input(type="text", name="name", placeholder="Ваше имя").form__input#callname
-                            span.text-warn Заполните поле
-                        .form-warn
-                            input(type="text", name="call", prefix="12", placeholder="+7(").form__input#callphone
-                            span.text-warn Заполните поле
-                    .button.button--modal Отправить
-                    .modal-form__consent
-                        .consent-checkbox
-                            input.chec(type="checkbox" id="callcheck" name="callcheck")
-                            label.check(for="callcheck")
-                        |Согласие на обработку персональных данных в соответствии с политикой конфиденциальности
 
 
             +modal__item("north", "modal__item--large")
