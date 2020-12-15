@@ -38,6 +38,7 @@ let _ = {
     js: dirDist + "js/",
     css: dirDist + "css/",
     out: "../",
+    docs: dirDist + "docs/",
   },
   fonts: {
     dir: dirApp + "static/fonts/",
@@ -67,6 +68,10 @@ let _ = {
       pages: "pages/*.pug",
       all: "**/*.pug",
     },
+  },
+  docs: {
+    dir: dirApp + "static/docs/",
+    select: "**/*",
   },
   style: {
     base: dirApp + "scss/base/",
@@ -244,6 +249,9 @@ gulp.task("clear-сache", () => { return clear("./.cache/") });
 gulp.task("clear-docs", () => { return clear(dirDocs) });
 gulp.task("clear-build", gulp.parallel("clear-css", "clear-js", "clear-pages"));
 gulp.task("clear-build-folder", () => { return clear(dirDist) });
+gulp.task("docs", () => {
+  return gulp.src(_.docs.dir + _.docs.select).pipe(gulp.dest(_.dist.docs));
+})
 
 gulp.task("copyDist", function () {
   return gulp.src(dirDist + "**/*").pipe(gulpCopy(dirDocs, { prefix: 1 }));
@@ -252,7 +260,7 @@ gulp.task("copyDist", function () {
 
 gulp.task("pre-scss", gulp.parallel("pngSprite", "svgSprite", "font2css"));
 gulp.task("styles", gulp.series("pre-scss", "scss"));
-gulp.task("build-start", gulp.parallel("styles", "js", "pug", "images"));
+gulp.task("build-start", gulp.parallel("styles", "js", "pug", "images", "docs"));
 gulp.task("dev-tools", gulp.parallel("browser-sync", "watch"));
 
 gulp.task("build", gulp.series("clear-build", "build-start"));
