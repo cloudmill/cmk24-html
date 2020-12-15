@@ -212,6 +212,8 @@ gulp.task("watch", function () {
   //Сжатие картинок
   gulp.watch(_.minImg.dir + _.minImg.select, gulp.parallel("images"));
 
+  gulp.watch(_.docs.dir + _.docs.select, gulp.parallel("docs"));
+
   //спрайты
   gulp.watch(
     _.sprite.png.dir + _.sprite.png.select,
