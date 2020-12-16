@@ -31,6 +31,8 @@ $(document).ready(function() {
 
   formId();
 
+  ajaxForms();
+
 });
 
 let headerScroll = function() {
@@ -308,5 +310,9 @@ function formId() {
     $(modal).find('[name="form-id"]').val(data);
     console.log(modal);
   });
+
+}
+
+function ajaxForms() {
 
 }
