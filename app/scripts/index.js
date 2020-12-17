@@ -31,8 +31,6 @@ $(document).ready(function() {
 
   formId();
 
-  ajaxForms();
-
 });
 
 let headerScroll = function() {
@@ -143,11 +141,35 @@ function modal() {
 
   });
 
-  $('.button--modal').on('click', function(){
+  $('.modal-form__form').on('submit', function(e){
+    e.preventDefault();
     if (($('#chec').prop('checked') && (( $('#callphone').val().length > 1) || ($('#email').val().length > 5) )) || ($('#callcheck').prop('checked') && (( $('#callphone').val().length > 1) || ($('#email').val().length > 5) ))){
-      $('.modal__thanks').css('display', 'flex');
-      $('.modal-form__consent').removeClass('modal-form__consent--red');
-      $('.consent-checkbox').removeClass('consent-checkbox--red');
+      let form = $(this),
+        name = form.find('input[name=name]').val(),
+        phone = form.find('input[name=call]').val(),
+        mail = form.find('input[name=e-mail]').val(),
+        question = form.find('textarea[name=question]').val(),
+        type = form.find('input[type=hidden]').val(),
+        formData = new Object();
+
+      if (type == 'Форма: Узнать подробнее с первого экрана') {
+        formData = {
+          name: name,
+          phone: phone,
+          mail: mail,
+          question: question,
+          type: type
+        }
+      } else {
+        formData = {
+          name: name,
+          phone: phone,
+          type: type
+        }
+      }
+
+      ajaxForms(formData);
+      
     }else{
       $('.modal-form__consent').addClass('modal-form__consent--red');
       $('.consent-checkbox').addClass('consent-checkbox--red');
@@ -313,6 +335,18 @@ function formId() {
 
 }
 
-function ajaxForms() {
-
+function ajaxForms(data) {
+  $.ajax({
+    type: "POST",
+    url: "/backend/mail.php",
+    dataType: 'json',
+    data: data,
+    success: function (data) {
+      if (data.success == true) {
+        $('.modal__thanks').css('display', 'flex');
+        $('.modal-form__consent').removeClass('modal-form__consent--red');
+        $('.consent-checkbox').removeClass('consent-checkbox--red');
+      } 
+    }
+  });
 }
