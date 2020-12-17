@@ -1,4 +1,7 @@
 .modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     opacity: 0;
     position: fixed;
     top: 0;
@@ -36,7 +39,7 @@
         margin: 0 auto;
         $padding: 15px;
         $width: 550px;
-        padding: 120px $padding; // test
+        // padding: 120px $padding; // test
         max-width: $width + $padding * 2;
 
         &--medium {
@@ -274,7 +277,7 @@
         max-height: 320px;
         position: absolute;
         right: 115px;
-        bottom: 0;
+        bottom: -1px;
 
         @media (max-width: 870px) {
             max-height: 250px;

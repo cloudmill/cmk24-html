@@ -34,7 +34,24 @@
     display: inline-block;
     font-size: 60px;
     line-height: 127.98%;
-    border-bottom: 1px solid #0A0A0A;
+    position: relative;
+    // border-bottom: 1px solid #0A0A0A;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: block;
+      border-bottom: 1px solid #0A0A0A;
+      transform: scaleX(1);
+      transition: all .2s;
+    }
+  
+    &:hover::before {
+      transform: scaleX(0)
+    }
     @include large {
       font-size: 42px;
     }

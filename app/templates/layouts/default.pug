@@ -36,7 +36,7 @@ html(lang="ru")
                         .form-warn
                             textarea.form__input.form__input--textarea(name="question", cols="30", rows="10", placeholder="Ваш вопрос")
                             span.text-warn Заполните поле
-                        input(type="text", name="form-id").ghost-input
+                        input(type="hidden", name="form-id").ghost-input
 
                         button(type="submit").button.button--modal Отправить
 
@@ -60,7 +60,7 @@ html(lang="ru")
                         .form-warn
                             input(type="text", name="call", prefix="12", placeholder="+7(").form__input#callphone
                             span.text-warn Заполните поле
-                        input(type="text", name="form-id").ghost-input
+                        input(type="hidden", name="form-id").ghost-input
 
                         button(type="submit").button.button--modal Отправить
 
@@ -263,7 +263,7 @@ html(lang="ru")
                 img.modal-img(src="../images/veles-b.png", alt="текст-отзыв")
 
             +modal__item("maksphil", "modal__item--medium")
-                img.modal-img(src="../images/maksphil-b.png", alt="текст-отзыв")
+                img.modal-img(src="../images/maksfil-b.png", alt="текст-отзыв")
 
             +modal__item("belserv", "modal__item--medium")
                 img.modal-img(src="../images/belserv.png", alt="текст-отзыв")

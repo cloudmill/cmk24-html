@@ -12,7 +12,7 @@
         <div class="burger"><span></span><span></span><span></span></div>
         <div class="burger-menu">
           <ul>
-            <li><a href="#start"><img src="./images/header-logo.svg" alt="лого"></a></li>
+            <li><a href="#start"><img class="logo" src="./images/header-logo.svg" alt="лого"></a></li>
             <li><a class="burger-menu__item" href="#advant">Преимущества</a></li>
             <li><a class="burger-menu__item" href="#tariffs">Сроки и стоимость</a></li>
             <li><a class="burger-menu__item" href="#sale">Скидка 30%</a></li>
@@ -24,7 +24,7 @@
           <div class="row">
             <div class="row__item">
               <div class="header__logo"><a href="#start"><img src="./images/header-logo.svg" alt="лого"></a></div>
-              <div class="header__logo--scroll"><a href="#start"><img src="./images/header-logo--scroll.svg" alt="лого"></a></div>
+              <div class="header__logo--scroll"><a href="#start"><img class="logo" href="#start" src="./images/header-logo--scroll.svg" alt="лого"></a></div>
               <nav class="header__nav"><a href="#advant">Преимущества</a><a href="#tariffs">Сроки и стоимость</a><a href="#sale">Скидка 30%</a><a href="#case">Кейсы</a><a href="#contacts">Контакты</a></nav>
             </div>
             <div class="row__item"><a class="header__phone" href="tel:8 800 5555-087">8 800 5555-087</a>
@@ -91,7 +91,7 @@
               <div class="tariff">
                 <h2 class="tariff__title">Премиум</h2>
                 <button class="tariff__description js--tooltip" data-tooltip="tariff-1">
-                  <div class="link link--help" id="five">Описание
+                  <div class="link link--help" id="five">Варианты внедрения
                     <div class="tooltip tariff-tool" id="tool-five">Выездной диагностический аудит предприятия. Отчет с рекомендациями по устранению несоответствий. Разработка документации под ваше предприятие. Обучение сотрудников отдела качества предприятия СМК. Консультационное сопровождение внедрения СМК на предприятии. Подготовка предприятия к аудит-проверкам</div>
                     <div class="arrow tariff-arrow"></div>
                   </div>
@@ -110,7 +110,7 @@
               <div class="tariff">
                 <h2 class="tariff__title">Стандарт</h2>
                 <button class="tariff__description js--tooltip" data-tooltip="tariff-1">
-                  <div class="link link--help" id="six">Описание
+                  <div class="link link--help" id="six">Варианты внедрения
                     <div class="tooltip tariff-tool" id="tool-six">Аудит, дистанционное внедрение СМК, без выезда эксперта. Обучение отдела качества поддержанию СМК в рабочем состоянии. Сертификаты внутренних аудиторов. Взаимодействие проходит по скайп</div>
                     <div class="arrow tariff-arrow"></div>
                   </div>
@@ -129,7 +129,7 @@
               <div class="tariff tariff--highlight">
                 <h2 class="tariff__title">Базовый</h2>
                 <button class="tariff__description js--tooltip" data-tooltip="tariff-1">
-                  <div class="link link--help link--help--white" id="seven">Описание
+                  <div class="link link--help link--help--white" id="seven">Варианты внедрения
                     <div class="tooltip tariff-tool" id="tool-seven">Разработка необходимой документации и полноценное онлайн обучение персонала компании принципам внедрения СМК</div>
                     <div class="arrow tariff-arrow"></div>
                   </div>
@@ -148,7 +148,7 @@
               <div class="tariff">
                 <h2 class="tariff__title">Смарт</h2>
                 <button class="tariff__description js--tooltip" data-tooltip="tariff-1">
-                  <div class="link left link--help" id="eight">Описание
+                  <div class="link left link--help" id="eight">Варианты внедрения
                     <div class="tooltip tariff-tool" id="tool-eight">Разработка необходимой документации СМК экспертом, совместно с заказчиком, с формированием отчета. Четыре 3-х часовых он-лайн обучения</div>
                     <div class="arrowl tariff-arrow"></div>
                   </div>
@@ -339,7 +339,7 @@
                     <div class="form-warn">
                       <textarea class="form__input form__input--textarea" name="question" cols="30" rows="10" placeholder="Ваш вопрос"></textarea><span class="text-warn">Заполните поле</span>
                     </div>
-                    <input class="ghost-input" type="text" name="form-id">
+                    <input class="ghost-input" type="hidden" name="form-id">
                     <button class="button button--modal" type="submit">Отправить</button>
                   </form>
                   <div class="modal-form__consent">
@@ -370,7 +370,7 @@
                     <div class="form-warn">
                       <input class="form__input" type="text" name="call" prefix="12" placeholder="+7(" id="callphone"><span class="text-warn">Заполните поле</span>
                     </div>
-                    <input class="ghost-input" type="text" name="form-id">
+                    <input class="ghost-input" type="hidden" name="form-id">
                     <button class="button button--modal" type="submit">Отправить</button>
                   </form>
                   <div class="modal-form__consent">
@@ -654,7 +654,7 @@
                 <div class="modal__close-icon"><i class="svg-icon svg-cross"></i>
                 </div>
               </button>
-              <div class="modal__content"><img class="modal-img" src="../images/maksphil-b.png" alt="текст-отзыв">
+              <div class="modal__content"><img class="modal-img" src="../images/maksfil-b.png" alt="текст-отзыв">
               </div>
             </div>
             <div class="modal__item modal__item--medium" id="belserv">

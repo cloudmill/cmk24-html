@@ -23,7 +23,7 @@
             }
         }
 
-        @media (max-width: 690px){
+        @media (max-width: 710px){
             width: 100%;
             flex-basis: auto;
             max-width: 500px;
@@ -75,6 +75,7 @@
         &__title {
             font-size: 30px;
             line-height: 39px;
+            padding-bottom: 8px;
         }
 
 
