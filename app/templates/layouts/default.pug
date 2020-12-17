@@ -8,6 +8,12 @@ html(lang="ru")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title=pageTitle
         link(href='css/style.min.css' rel='stylesheet')
+        link(rel="shortcut icon" type="image/png" href="/images/favicon.png")
+        
+        <meta property="og:title" content="Сертификация СМК ГОСТ Р ИСО 9001-2015. Сроки и стоимость внедрения | СМК24 8 800 5555-087"/>
+        <meta property="og:description" content="►Внедрим систему менеджмента качества по стандарту ГОСТ Р ИСО 9001-2015 ►8 800 5555-087 ►СМК24.ru"/>
+        <meta property="og:image" content="/images/og banner.png"/>
+
     body
         .wrapper
             include ../modules/header
@@ -25,6 +31,9 @@ html(lang="ru")
             
             +modal__item("question")
                 .modal-form
+                    .modal__thanks
+                        .modal__title.modal__title--black Спасибо за обращение!
+                        .modal__title.modal__title--black Мы свяжемся с вами в течении 15 минут
                     .modal-form__title Задать вопрос по внедрению СМК
                     form(action="").form.modal-form__form
                         .form-warn

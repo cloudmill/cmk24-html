@@ -139,6 +139,15 @@ function modal() {
       }
     });
 
+    $(document).on('keydown',function(event){
+      if ( event.keyCode == 27 ) { 
+        $(".modal").removeClass("modal--active");
+        $(".modal__item--active").removeClass("modal__item--active");
+        $('.modal__thanks').css('display', 'none');
+
+      };
+    });
+
   });
 
   $('.modal-form__form').on('submit', function(e){
@@ -181,7 +190,7 @@ function modal() {
 function mask (){
 
   Inputmask({ 
-    mask: "+7(999)[ 999-99-99]",
+    mask: "+7(999) 999-99-99",
     greedy: false,
     autoUnmask: true,
     clearIncomplete: true,
@@ -222,7 +231,36 @@ function cllick () {
 
 
 function tooltip () {
-  var name;
+  
+  if ($(window).width() >= 1000){
+
+    var name;
+  var link;
+
+  $('.link').on('mouseenter', function(){
+    name = ('#tool-' + $(this).attr('id'));
+    $(name).addClass('tool-active');
+    $(this).children('.arrow').addClass('arrow-block');
+    $(this).children('.arrowl').addClass('arrow-block');
+  });
+  $('.link').on('mouseleave', function(){
+    name = ('#tool-' + $(this).attr('id'));
+    $(name).removeClass('tool-active');
+    $(this).children('.arrow').removeClass('arrow-block');
+    $(this).children('.arrowl').removeClass('arrow-block');
+  });
+  $('.left').on('mouseenter', function(){
+    name = ('#tool-' + $(this).attr('id'));
+    $(name).addClass('tool-activel');
+  });
+  $('.left').on('mouseleave', function(){
+    name = ('#tool-' + $(this).attr('id'));
+    $(name).removeClass('tool-activel');
+  });
+
+  }else{
+
+    var name;
   $('.link').on('click', function(){
     if (name !== ('#tool-' + $(this).attr('id'))){
       $(name).removeClass('tool-active');
@@ -253,6 +291,9 @@ function tooltip () {
     }
 
   });
+
+  }
+  
 }
 
 
@@ -264,6 +305,7 @@ function formWarn () {
         if ($(this).val() < 2) {
           $(this).addClass('form__input--warn');
           $(this).siblings('.text-warn').css('display', 'block');
+          $('.button--modal').event.preventDefault();
         }else{
           $(this).removeClass('form__input--warn');
           $(this).siblings('.text-warn').css('display', 'none');
@@ -344,7 +386,6 @@ function formId() {
     }
 
     $(modal).find('[name="form-id"]').val(data);
-    console.log(modal);
   });
 
 }

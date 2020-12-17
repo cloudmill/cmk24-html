@@ -45,7 +45,7 @@
 
 
   &__list {
-    padding: 0 25px;
+    padding: 0 100px 0 50px;
     min-height: 300px; // test
     display: flex;
     align-items: stretch;
@@ -297,6 +297,10 @@
     background-color: white;
     max-width: 485px;border-radius: 4px;
     align-self: stretch;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 
     @media (max-width: 510px){
       padding: 30px;
