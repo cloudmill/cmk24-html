@@ -16,6 +16,9 @@
   line-height: 21px;
   &:hover {
     background-color: #ff2400;
+    .circle-b {
+      animation: pulse ease-out 0.5s;
+    }
   }
 
   // &--header {
@@ -169,6 +172,17 @@
     background: #4998FF;;
   }
 
+}
+
+.circle-b {
+  position: absolute;
+  // left: 0;
+  width: 130px;
+  height: 130px;
+  background-color: rgba(240, 228, 228, 0.51);
+  border-radius: 50%;
+  opacity: 1;
+  transform: scale(0);
 }
 
 @keyframes pulse{

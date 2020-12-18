@@ -3,7 +3,7 @@ import App from "./main";
 import Swiper from "swiper";
 import Inputmask from "inputmask";
 
-$(document).ready(function() {
+$(document).ready(function(event) {
 
   // HEADER
   headerScroll();
@@ -27,7 +27,7 @@ $(document).ready(function() {
 
   mask ();
 
-  formWarn ();
+  formWarn (event);
 
   formId();
 
@@ -119,7 +119,7 @@ function burger() {
   });
 }
 
-function modal() {
+function modal(event) {
 
   $(".js--modal").on("click", function () {
 
@@ -150,9 +150,27 @@ function modal() {
 
   });
 
-  $('.modal-form__form').on('submit', function(e){
-    e.preventDefault();
+  // if (($('#chec').prop('checked') == true) || ($('#callcheck').prop('checked') == true)){
+  //   $('.modal-form__consent').removeClass('modal-form__consent--red');
+  //   $('.consent-checkbox').removeClass('consent-checkbox--red');
+  // }else{
+  //   $('.modal-form__consent').addClass('modal-form__consent--red');
+  //   $('.consent-checkbox').addClass('consent-checkbox--red');
+  // (($('#chec').prop('checked') && (( $('#callphone').val().length > 1) || ($('#email').val().length > 5) )) || ($('#callcheck').prop('checked') && (( $('#callphone').val().length > 1) || ($('#email').val().length > 5) )))
+  // var button = function(event){
+  //   event.preventDefault();
+  // };
+  $('.button--modal').on('click', function(event){
+    
     if (($('#chec').prop('checked') && (( $('#callphone').val().length > 1) || ($('#email').val().length > 5) )) || ($('#callcheck').prop('checked') && (( $('#callphone').val().length > 1) || ($('#email').val().length > 5) ))){
+      $('.modal__thanks').css('display', 'flex');
+    }
+
+
+    if ($('#chec').prop('checked')  || $('#callcheck').prop('checked') ){
+      $('.modal-form__consent').removeClass('modal-form__consent--red');
+      $('.consent-checkbox').removeClass('consent-checkbox--red');
+      
       let form = $(this),
         name = form.find('input[name=name]').val(),
         phone = form.find('input[name=call]').val(),
@@ -184,7 +202,6 @@ function modal() {
       $('.consent-checkbox').addClass('consent-checkbox--red');
     }
  });
-
 }
 
 function mask (){
@@ -305,7 +322,7 @@ function formWarn () {
         if ($(this).val() < 2) {
           $(this).addClass('form__input--warn');
           $(this).siblings('.text-warn').css('display', 'block');
-          $('.button--modal').event.preventDefault();
+          event.preventDefault();
         }else{
           $(this).removeClass('form__input--warn');
           $(this).siblings('.text-warn').css('display', 'none');

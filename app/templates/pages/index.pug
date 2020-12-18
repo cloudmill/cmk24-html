@@ -15,6 +15,7 @@ block content
                 h2.title.title--start-h2 ГОСТ Р ИСО 9001-2015
                 p.text.text--start «Система менеджмента качества на соответствие»
                 a.button.button--mg-t--30.button--start.js--modal(href="#question", data-form-id="Форма: Узнать подробнее с первого экрана") Узнать подробнее
+                    .circle-b
                 .start__bg-img
                     img(src="./images/start-bg.svg", alt="планета")
         
@@ -32,7 +33,11 @@ block content
                                     |эксперта-аудитора на предприятии
                             .link.item-link#one Ваш аудитор
                                 .tooltip#tool-one 
-                                    img(src="./images/auditor.png", alt="Державин Игорь")
+                                    .tool__inner
+                                        .item Александр
+                                            br
+                                            |Кожевников
+                                        img(src="./images/auditor.png", alt="Державин Игорь")
                                 .arrow
                         .advant__item
                             .advant__content
@@ -90,6 +95,7 @@ block content
                                 p.tariff__info-text 2-6 месяца
 
                         a.tariff__button.button.button--blue.js--modal(href="#call", data-form-id="Форма: Заявка тарифа Премиум") Мне подходит 
+                            .circle-b
                     
                     .tariff
                     
@@ -113,6 +119,7 @@ block content
                                 p.tariff__info-text 1,5-3 месяца
 
                         a.tariff__button.button.button--blue.js--modal(href="#call", data-form-id="Форма: Заявка тарифа Стандарт") Мне подходит 
+                            .circle-b
                         
                     .tariff.tariff--highlight
                     
@@ -136,6 +143,7 @@ block content
                                 p.tariff__info-text 1-2 месяца
 
                         a.button.tariff__button.js--modal(href="#call", data-form-id="Форма: Заявка тарифа Базовый") Мне подходит 
+                            .circle-b
 
                     .tariff
                     
@@ -159,6 +167,7 @@ block content
                                 p.tariff__info-text 1-1,5 месяц
 
                         a.tariff__button.button.button--blue.js--modal(href="#call", data-form-id="Форма: Заявка тарифа Смарт") Мне подходит 
+                            .circle-b
 
 
         .sale.section#sale
@@ -169,7 +178,8 @@ block content
                         p.text.text--section.text--mg-t--20 Ответьте на несколько вопросов 
                             br
                             |и получите скидку!
-                        .button.button--mg-t--100.button--wd--240 Получить скидку
+                        .button.button--mg-t--100.button--wd--240(onclick="Marquiz.showModal('5fd78c071c7c3a0044d42961')") Получить скидку
+                            .circle-b
                         .percent
                             p -30%
                             p -30%
@@ -212,6 +222,7 @@ block content
                 .title.title--subtitle.title--mg-t--35 Игорь Державин
                 p.text.text--toolTip.text--mg-t--20 cпециалист по внедрению ИСО
                 .button.button--wd--240.button--mg-t--75.js--modal(href="#question", data-form-id="Форма: Задайте вопрос, Игорю Державину") Задать вопрос
+                    .circle-b
     .slider-block.case.section#case
         .inner.inner--small
             .block-row
@@ -227,18 +238,21 @@ block content
                         p.text.text--toolTip.text--mg-t--60 Задача
                         p.title.title--subtitle-small.title--mg-t--20 Провести мероприятие по внедрению ГОСТ Р 51705 (ХАССП)
                         .button.button--red.button--mg-t--100.js--modal(href="#rus") Кейс полностью
+                            .circle-b
                     .swiper-slide.card
                         p.text.text--toolTip Федеральная авиакомпания
                         p.title.title--subtitle.title--mg-t--20 «АО Плярные авиалинии»
                         p.text.text--toolTip.text--mg-t--60 Задача
                         p.title.title--subtitle-small.title--mg-t--20 Произвести на данном предприятии  выездной  диагностический Аудит СМК
                         .button.button--red.button--mg-t--100.js--modal(href="#airlines") Кейс полностью
+                            .circle-b
                     .swiper-slide.card
                         p.text.text--toolTip Производитель водных дисперсий полимеров и клеев
                         p.title.title--subtitle.title--mg-t--20 НОРД –СИНТЕЗ
                         p.text.text--toolTip.text--mg-t--60 Задача
                         p.title.title--subtitle-small.title--mg-t--20 Обновить устаревшую СМК, провести обучение сотрудников
                         .button.button--red.button--mg-t--100.js--modal(href="#north") Кейс полностью
+                            .circle-b
     .slider-block.docs
         .inner.inner--small
             .block-row

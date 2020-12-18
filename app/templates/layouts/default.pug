@@ -48,6 +48,7 @@ html(lang="ru")
                         input(type="hidden", name="form-id").ghost-input
 
                         button(type="submit").button.button--modal Отправить
+                            .circle-b
 
                     .modal-form__consent
                         .consent-checkbox
@@ -71,7 +72,8 @@ html(lang="ru")
                             span.text-warn Заполните поле
                         input(type="hidden", name="form-id").ghost-input
 
-                        button(type="submit").button.button--modal Отправить
+                        button(type="submit", onclick="button(event)").button.button--modal Отправить
+                            .circle-b
 
                     .modal-form__consent
                         .consent-checkbox
@@ -287,5 +289,8 @@ html(lang="ru")
 
         script
             include metrica.js
+
+        script
+            include marquiz.js
         <noscript><div><img src="https://mc.yandex.ru/watch/70482679" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 
