@@ -351,6 +351,7 @@
   }
   .card-img {
     position: relative;
+    display: inline-block;
 
     &::before {
       content: '';
