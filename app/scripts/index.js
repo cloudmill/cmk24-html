@@ -164,13 +164,24 @@ function modal(event) {
     
     if (($('#chec').prop('checked') && (( $('#callphone').val().length > 1) || ($('#email').val().length > 5) )) || ($('#callcheck').prop('checked') && (( $('#callphone').val().length > 1) || ($('#email').val().length > 5) ))){
       $('.modal__thanks').css('display', 'flex');
+      $('.modal').addClass('modal--active');
+      $('#thanks').addClass('modal__item--active');
+      $('#chec').prop('checked', false);
+      $('#callcheck').prop('checked', false);
+      $('.form__input').val('');
+    } else{
+      $('.modal-form__consent').addClass('modal-form__consent--red');
+      $('.consent-checkbox').addClass('consent-checkbox--red');
+      event.preventDefault();
     }
 
 
     if ($('#chec').prop('checked')  || $('#callcheck').prop('checked') ){
-      $('.modal-form__consent').removeClass('modal-form__consent--red');
-      $('.consent-checkbox').removeClass('consent-checkbox--red');
+      // $('.modal-form__consent').removeClass('modal-form__consent--red');
+      // $('.consent-checkbox').removeClass('consent-checkbox--red');
       
+      event.preventDefault();
+
       let form = $(this),
         name = form.find('input[name=name]').val(),
         phone = form.find('input[name=call]').val(),
@@ -201,8 +212,9 @@ function modal(event) {
       ajaxForms(formData);
       
     }else{
-      $('.modal-form__consent').addClass('modal-form__consent--red');
-      $('.consent-checkbox').addClass('consent-checkbox--red');
+      // $('.modal-form__consent').addClass('modal-form__consent--red');
+      // $('.consent-checkbox').addClass('consent-checkbox--red');
+      event.preventDefault();
     }
  });
 }
