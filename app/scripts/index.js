@@ -176,7 +176,8 @@ function modal(event) {
         phone = form.find('input[name=call]').val(),
         mail = form.find('input[name=e-mail]').val(),
         question = form.find('textarea[name=question]').val(),
-        type = form.find('input[type=hidden]').val(),
+        type = form.find('input[name=form-id]').val(),
+        url = form.find('input[name=url]').val(),
         formData = new Object();
 
       if (type == 'Форма: Узнать подробнее с первого экрана') {
@@ -185,13 +186,15 @@ function modal(event) {
           phone: phone,
           mail: mail,
           question: question,
-          type: type
+          type: type,
+          url: url
         }
       } else {
         formData = {
           name: name,
           phone: phone,
-          type: type
+          type: type,
+          url: url
         }
       }
 
