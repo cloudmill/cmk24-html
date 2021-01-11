@@ -172,6 +172,7 @@
     display: none;
     padding-left: 14px;
     cursor: pointer;
+    flex-shrink: 0;
 
     @media (max-width: 1100px){
       display: block;
@@ -237,7 +238,7 @@
       line-height: 26px;
     }
     &--active {
-      top: 100px;
+      top: 98px;
     } 
     &--scroll {
       background-color: white;

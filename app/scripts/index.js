@@ -164,19 +164,31 @@ function modal(event) {
     
     if (($('#chec').prop('checked') && (( $('#callphone').val().length > 1) || ($('#email').val().length > 5) )) || ($('#callcheck').prop('checked') && (( $('#callphone').val().length > 1) || ($('#email').val().length > 5) ))){
       $('.modal__thanks').css('display', 'flex');
+      $('.modal').addClass('modal--active');
+      $('#thanks').addClass('modal__item--active');
+      $('#chec').prop('checked', false);
+      $('#callcheck').prop('checked', false);
+      $('.form__input').val('');
+    } else{
+      $('.modal-form__consent').addClass('modal-form__consent--red');
+      $('.consent-checkbox').addClass('consent-checkbox--red');
+      event.preventDefault();
     }
 
 
     if ($('#chec').prop('checked')  || $('#callcheck').prop('checked') ){
-      $('.modal-form__consent').removeClass('modal-form__consent--red');
-      $('.consent-checkbox').removeClass('consent-checkbox--red');
+      // $('.modal-form__consent').removeClass('modal-form__consent--red');
+      // $('.consent-checkbox').removeClass('consent-checkbox--red');
       
+      event.preventDefault();
+
       let form = $(this),
         name = form.find('input[name=name]').val(),
         phone = form.find('input[name=call]').val(),
         mail = form.find('input[name=e-mail]').val(),
         question = form.find('textarea[name=question]').val(),
-        type = form.find('input[type=hidden]').val(),
+        type = form.find('input[name=form-id]').val(),
+        url = form.find('input[name=url]').val(),
         formData = new Object();
 
       if (type == 'Форма: Узнать подробнее с первого экрана') {
@@ -185,21 +197,24 @@ function modal(event) {
           phone: phone,
           mail: mail,
           question: question,
-          type: type
+          type: type,
+          url: url
         }
       } else {
         formData = {
           name: name,
           phone: phone,
-          type: type
+          type: type,
+          url: url
         }
       }
 
       ajaxForms(formData);
       
     }else{
-      $('.modal-form__consent').addClass('modal-form__consent--red');
-      $('.consent-checkbox').addClass('consent-checkbox--red');
+      // $('.modal-form__consent').addClass('modal-form__consent--red');
+      // $('.consent-checkbox').addClass('consent-checkbox--red');
+      event.preventDefault();
     }
  });
 }
