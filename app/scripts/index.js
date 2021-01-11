@@ -3,7 +3,7 @@ import App from "./main";
 import Swiper from "swiper";
 import Inputmask from "inputmask";
 
-$(document).ready(function(event) {
+$(document).ready(function() {
 
   // HEADER
   headerScroll();
