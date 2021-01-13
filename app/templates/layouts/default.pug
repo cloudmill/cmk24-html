@@ -41,7 +41,7 @@ html(lang="ru")
                         .modal__title.modal__title--black Спасибо за обращение!
                         .modal__title.modal__title--black Мы свяжемся с вами в течении 15 минут
                     .modal-form__title Задать вопрос по внедрению СМК
-                    form(action="").form.modal-form__form
+                    form(action="").form.modal-form__form(data-attr='modal_form')
                         .form-warn
                             input(type="text", name="name", placeholder="Ваше имя", required).form__input
                             span.text-warn Заполните поле
@@ -69,7 +69,7 @@ html(lang="ru")
                         .modal__title.modal__title--black Спасибо за обращение!
                         .modal__title.modal__title--black Мы свяжемся с вами в течении 15 минут
                     .modal-form__title Запросить обратный звонок
-                    form(action="").form.modal-form__form
+                    form(action="").form.modal-form__form(data-attr='modal_form')
                         .form-warn
                             input(type="text", name="name", placeholder="Ваше имя").form__input#callname
                             span.text-warn Заполните поле
