@@ -207,11 +207,11 @@ function modal(event) {
 
 
     if ($('#chec').prop('checked')  || $('#callcheck').prop('checked') ){
-      // $('.modal-form__consent').removeClass('modal-form__consent--red');
-      // $('.consent-checkbox').removeClass('consent-checkbox--red');
+      $('.modal-form__consent').removeClass('modal-form__consent--red');
+      $('.consent-checkbox').removeClass('consent-checkbox--red');
     }else{
-      // $('.modal-form__consent').addClass('modal-form__consent--red');
-      // $('.consent-checkbox').addClass('consent-checkbox--red');
+      $('.modal-form__consent').addClass('modal-form__consent--red');
+      $('.consent-checkbox').addClass('consent-checkbox--red');
       event.preventDefault();
     }
  });
