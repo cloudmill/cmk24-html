@@ -162,7 +162,7 @@ function modal(event) {
   // };
   $('.button--modal').on('click', function(event){
     
-    if (($('#chec').prop('checked') && ($('#quest').val().length > 5) && ($('#email').val().length > 5) ) || ($('#callcheck').prop('checked') && (( $('#callphone').val().length > 1)  ))){
+    if (($('#chec').prop('checked') && ($('#quest').val().length > 0) && ($('#email').val().length > 5) ) || ($('#callcheck').prop('checked') && (( $('#callphone').val().length > 1)  ))){
       event.preventDefault();
 
       let form = $(this).parents('[data-attr=modal_form]'),
