@@ -27,7 +27,7 @@ $(document).ready(function() {
 
   mask ();
 
-  formWarn (event);
+  //formWarn ();
 
   formId();
 
@@ -72,7 +72,7 @@ function slider() {
       const
 
           slider = $(this).find(".swiper-container"),
-          
+
           buttons = {
               left: $(this).find(".button--left"),
               right: $(this).find(".button--right"),
@@ -87,12 +87,12 @@ function slider() {
                   prevEl: buttons.left[0],
               },
           });
-      
+
   });
 }
 
 function burger() {
-  var counter = 0; 
+  var counter = 0;
   $('.burger').on('click', function(){
     counter =counter +1;
     let height = $('.start').innerHeight()
@@ -107,7 +107,7 @@ function burger() {
       if ( $(window).scrollTop() !== 0 ){
         $('.burger').addClass('burger--scroll');
       }
-      
+
     }
   });
 
@@ -117,6 +117,12 @@ function burger() {
     $('header').removeClass('header--burger');
     $('.burger').removeClass('noneScroll');
   });
+}
+
+
+function validateEmail(email) {
+  const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
 }
 
 function modal(event) {
@@ -140,7 +146,7 @@ function modal(event) {
     });
 
     $(document).on('keydown',function(event){
-      if ( event.keyCode == 27 ) { 
+      if ( event.keyCode == 27 ) {
         $(".modal").removeClass("modal--active");
         $(".modal__item--active").removeClass("modal__item--active");
         $('.modal__thanks').css('display', 'none');
@@ -161,8 +167,17 @@ function modal(event) {
   //   event.preventDefault();
   // };
   $('.button--modal').on('click', function(event){
-    
-    if (($('#chec').prop('checked') && ($('#quest').val().length > 0) && ($('#email').val().length > 5) ) || ($('#callcheck').prop('checked') && (( $('#callphone').val().length > 1)  ))){
+
+    if (
+        (
+            $('#chec').prop('checked') &&
+            ($('#quest').val().length > 0) && validateEmail($('#email').val())
+        ) || (
+            $('#callcheck').prop('checked') && (
+                ( $('#callphone').val().length > 1) && ($('#callname').val().length > 1)
+            )
+        )
+    ){
       event.preventDefault();
 
       let form = $(this).parents('[data-attr=modal_form]'),
@@ -205,8 +220,23 @@ function modal(event) {
       event.preventDefault();
     }
 
-
-    if ($('#chec').prop('checked')  || $('#callcheck').prop('checked') ){
+    let mod = $(this).parent();
+    mod.find('.form__input').each(function(){
+      if ($(this).val() < 2) {
+        $(this).addClass('form__input--warn');
+        $(this).siblings('.text-warn').css('display', 'block');
+        event.preventDefault();
+      } else {
+        if($(this)[0].id === 'email' && !validateEmail($(this).val())) {
+          $(this).addClass('form__input--warn');
+          $(this).next('.text-warn').text('Неверно указан адрес почты').css('display', 'block');
+        } else {
+          $(this).removeClass('form__input--warn');
+          $(this).siblings('.text-warn').css('display', 'none');
+        }
+      }
+    });
+    if ($('#chec').prop('checked') || $('#callcheck').prop('checked') ){
       $('.modal-form__consent').removeClass('modal-form__consent--red');
       $('.consent-checkbox').removeClass('consent-checkbox--red');
     }else{
@@ -219,18 +249,14 @@ function modal(event) {
 
 function mask (){
 
-  Inputmask({ 
+  Inputmask({
     mask: "+7(999) 999-99-99",
     greedy: false,
     autoUnmask: true,
     clearIncomplete: true,
     showMaskOnHover: false,
-    autoUnmask: true,
-    
-  
-  
   }).mask("#callphone");
-  
+
 }
 
 
@@ -238,9 +264,9 @@ function mask (){
 
 function cllick () {
   $('.button').on('click', function(e){
-    
+
       $(this).append('<div class = circle></div>')
-    
+
       var position = $(this).offset();
       var topX = (e.pageX - (position.left+65));
       var leftY = (e.pageY - (position.top+65));
@@ -254,14 +280,14 @@ function cllick () {
     $('.circle').remove();
 
   });
-  
+
 }
 
 
 
 
 function tooltip () {
-  
+
   if ($(window).width() >= 1000){
 
     var name;
@@ -306,7 +332,7 @@ function tooltip () {
     }else{
       $(name).toggleClass('tool-active');
     }
-    
+
   });
 
   $(window).on('click', function(event){
@@ -323,13 +349,13 @@ function tooltip () {
   });
 
   }
-  
+
 }
 
 
 function formWarn () {
 
-  $('.button--modal').on('click', function(){
+  /*$('.button--modal').on('click', function(){
       let mod = $(this).parent();
       mod.find('.form__input').each(function(){
         if ($(this).val() < 2) {
@@ -341,9 +367,9 @@ function formWarn () {
           $(this).siblings('.text-warn').css('display', 'none');
         }
       });
-      
-      
-  });
+
+
+  });*/
 
   $(window).on('click', function(event){
 
@@ -369,7 +395,7 @@ function anchor () {
         if( scroll > top && scroll < bottom){
               $('a.nav-active').removeClass('nav-active');
               $('a[href = "#' + id + '"]').addClass('nav-active');
-  
+
         }
         if ($(window).scrollTop() == 0){
           $('a.nav-active').removeClass('nav-active');
@@ -379,16 +405,16 @@ function anchor () {
 
 
   $("nav").on("click","a", function (event) {
-    
+
     event.preventDefault();
 
-    
+
     let id  = $(this).attr('href'),
 
-    
+
     top = $(id).offset().top - 100;
-     
-    
+
+
     $('body,html').animate({scrollTop: top}, 400);
   });
 
@@ -397,7 +423,7 @@ function anchor () {
 
     let id  = $(this).attr('href'),
 
-    
+
     top = $(id).offset().top - 100;
 
     $('body,html').animate({scrollTop: top}, 400);
@@ -431,7 +457,7 @@ function ajaxForms(data) {
         $('.modal__thanks').css('display', 'flex');
         $('.modal-form__consent').removeClass('modal-form__consent--red');
         $('.consent-checkbox').removeClass('consent-checkbox--red');
-      } 
+      }
     }
   });
 }
